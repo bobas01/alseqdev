@@ -68,11 +68,20 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Décrivez le projet. Le message s’ouvre dans WhatsApp, prêt à envoyer.",
+    "intro": "Décrivez le projet. Le message part par e-mail. WhatsApp reste ouvert si vous préférez écrire là.",
     "name": "Nom",
     "email": "E-mail",
     "message": "Message",
-    "submit": "Ouvrir WhatsApp",
-    "direct": "Ou écrire directement"
+    "submit": "Envoyer",
+    "sending": "Envoi…",
+    "success": "Message envoyé. La réponse arrive par e-mail.",
+    "error": "L’envoi n’a pas abouti. Réessayez, ou écrivez sur WhatsApp.",
+    "invalid": "Vérifiez le nom, l’e-mail et le message.",
+    "soon": "Patientez quelques secondes, puis envoyez à nouveau.",
+    "rate": "Trop de messages pour le moment. Réessayez plus tard, ou écrivez sur WhatsApp.",
+    "kept": "Le message est conservé le temps de la réponse, puis supprimé.",
+    "direct": "Ou écrire sur WhatsApp",
+    "float": "WhatsApp",
+    "prefill": "Bonjour, je voudrais parler d’un projet."
   }
 }

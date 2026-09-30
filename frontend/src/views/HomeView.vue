@@ -55,20 +55,32 @@
       <div class="wrap contact">
         <h2>{{ t("contact.title") }}</h2>
         <p class="intro">{{ t("contact.intro") }}</p>
-        <form @submit.prevent="openChat">
+        <form @submit.prevent="submitContact">
           <label>
             {{ t("contact.name") }}
-            <input v-model="form.name" name="name" type="text" required autocomplete="name" />
+            <input v-model="form.name" name="name" type="text" required maxlength="80" autocomplete="name" />
           </label>
           <label>
             {{ t("contact.email") }}
-            <input v-model="form.email" name="email" type="email" required autocomplete="email" />
+            <input v-model="form.email" name="email" type="email" required maxlength="180" autocomplete="email" />
           </label>
           <label>
             {{ t("contact.message") }}
-            <textarea v-model="form.message" name="message" required rows="5"></textarea>
+            <textarea v-model="form.message" name="message" required minlength="5" maxlength="4000" rows="5"></textarea>
           </label>
-          <button class="btn btn-ink" type="submit">{{ t("contact.submit") }}</button>
+          <div class="hp" aria-hidden="true">
+            <label>
+              Fax
+              <input v-model="form.faxNumber" name="fax_number" type="text" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+          <button class="btn btn-ink" type="submit" :disabled="status === 'sending' || token === ''">
+            {{ status === "sending" ? t("contact.sending") : t("contact.submit") }}
+          </button>
+          <p v-if="status !== 'idle' && status !== 'sending'" class="form-status" role="status">
+            {{ t(`contact.${status}`) }}
+          </p>
+          <p class="kept">{{ t("contact.kept") }}</p>
         </form>
         <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
           {{ t("contact.direct") }}
@@ -79,21 +91,77 @@
 </template>
 
 <script setup>
-import { computed, reactive } from "vue";
+import { computed, onMounted, reactive, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { whatsappUrl } from "../whatsapp";
 
-const { t, tm } = useI18n();
+const { t, tm, locale } = useI18n();
 const services = computed(() => tm("services.items"));
 const method = computed(() => tm("method.items"));
 const form = reactive({
   name: "",
   email: "",
   message: "",
+  faxNumber: "",
+});
+const status = ref("idle");
+const token = ref("");
+const openedAt = Date.now();
+
+onMounted(async () => {
+  try {
+    const response = await fetch("/api/contact/token", { credentials: "same-origin" });
+    if (!response.ok) {
+      return;
+    }
+    const data = await response.json();
+    token.value = typeof data.token === "string" ? data.token : "";
+  } catch {
+    token.value = "";
+  }
 });
 
-function openChat() {
-  const text = `${form.name}\n${form.email}\n\n${form.message}`;
-  window.open(whatsappUrl(text), "_blank", "noopener,noreferrer");
+async function submitContact() {
+  if (status.value === "sending") {
+    return;
+  }
+  status.value = "sending";
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRF-Token": token.value,
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message,
+        locale: locale.value,
+        startedAt: openedAt,
+        fax_number: form.faxNumber,
+      }),
+    });
+    if (response.status === 201) {
+      form.name = "";
+      form.email = "";
+      form.message = "";
+      status.value = "success";
+      return;
+    }
+    const data = await response.json().catch(() => ({}));
+    if (response.status === 422 && (data.reason === "soon" || data.reason === "invalid")) {
+      status.value = data.reason;
+      return;
+    }
+    if (response.status === 429) {
+      status.value = "rate";
+      return;
+    }
+    status.value = "error";
+  } catch {
+    status.value = "error";
+  }
 }
 </script>

@@ -68,11 +68,20 @@
   },
   "contact": {
     "title": "Contacto",
-    "intro": "Describa el proyecto. El mensaje se abre en WhatsApp, listo para enviar.",
+    "intro": "Describa el proyecto. El mensaje se envía por correo. WhatsApp sigue abierto si prefiere escribir por allí.",
     "name": "Nombre",
     "email": "Correo",
     "message": "Mensaje",
-    "submit": "Abrir WhatsApp",
-    "direct": "O escribir directo"
+    "submit": "Enviar",
+    "sending": "Enviando…",
+    "success": "Mensaje enviado. La respuesta llega por correo.",
+    "error": "El envío no se completó. Inténtelo de nuevo o escriba por WhatsApp.",
+    "invalid": "Revise el nombre, el correo y el mensaje.",
+    "soon": "Espere unos segundos y envíe de nuevo.",
+    "rate": "Demasiados mensajes por ahora. Inténtelo más tarde o escriba por WhatsApp.",
+    "kept": "El mensaje se conserva el tiempo de la respuesta y después se borra.",
+    "direct": "O escribir por WhatsApp",
+    "float": "WhatsApp",
+    "prefill": "Hola, quiero hablar de un proyecto."
   }
 }

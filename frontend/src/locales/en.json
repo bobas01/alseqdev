@@ -68,11 +68,20 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Describe the project. The message opens in WhatsApp, ready to send.",
+    "intro": "Describe the project. The message is sent by email. WhatsApp stays open if you would rather write there.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "submit": "Open WhatsApp",
-    "direct": "Or message directly"
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Message sent. The reply comes by email.",
+    "error": "The message could not be sent. Try again, or write on WhatsApp.",
+    "invalid": "Check the name, email, and message.",
+    "soon": "Wait a few seconds, then send again.",
+    "rate": "Too many messages for now. Try later, or write on WhatsApp.",
+    "kept": "The message is kept long enough to reply, then deleted.",
+    "direct": "Or write on WhatsApp",
+    "float": "WhatsApp",
+    "prefill": "Hello, I would like to talk about a project."
   }
 }

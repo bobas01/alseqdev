@@ -248,6 +248,7 @@ main {
 }
 
 .contact form {
+  position: relative;
   display: grid;
   gap: 14px;
   max-width: 560px;
@@ -274,11 +275,51 @@ main {
   margin-top: 16px;
 }
 
+.contact .kept {
+  margin: 0;
+  font-size: 14px;
+}
+
+.form-status {
+  margin: 0;
+}
+
+.hp {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.wa-float {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 3;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #128c7e;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(20, 26, 34, 0.18);
+}
+
 .site-footer {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 48px 16px 32px;
+  padding: 48px 16px 96px;
   background: var(--ink);
   color: var(--cream);
   display: flex;
