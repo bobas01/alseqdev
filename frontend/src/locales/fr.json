@@ -1,7 +1,7 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "Sites, applications métier et SaaS, à distance, depuis Niterói.",
-  "tagline": "Sites et applications, à distance, depuis Niterói.",
+  "metaDescription": "De l’idée à la mise en ligne. Un site, un outil métier ou un produit, à distance.",
+  "tagline": "De l’idée à la mise en ligne.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Tous droits réservés.",
@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "lead": "Pour une entreprise qui a besoin d’un site, d’un outil de travail ou d’un produit en ligne. Les échanges se font en français, portugais, anglais et espagnol.",
+    "lead": "Un site, un outil métier ou un produit, mené avec vous à distance.",
     "project": "Parler d’un projet",
     "whatsapp": "Écrire sur WhatsApp"
   },
@@ -64,7 +64,7 @@
     "title": "Présence",
     "place": "Niterói, Rio de Janeiro",
     "zone": "Fuseau de São Paulo",
-    "text": "Le travail se fait à distance. Le matin croise la côte est des États-Unis. L’après-midi croise l’Europe."
+    "text": "Les appels se font en français, en portugais et en anglais. Le site se lit aussi en espagnol. Le matin croise la côte est des États-Unis. L’après-midi croise l’Europe."
   },
   "contact": {
     "title": "Contact",

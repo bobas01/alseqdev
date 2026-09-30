@@ -1,7 +1,7 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "Sites, aplicações de negócio e SaaS, à distância, a partir de Niterói.",
-  "tagline": "Sites e aplicações, à distância, a partir de Niterói.",
+  "metaDescription": "Da ideia à publicação. Um site, um sistema ou um produto, feito com você à distância.",
+  "tagline": "Da ideia à publicação.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Todos os direitos reservados.",
@@ -13,7 +13,7 @@
     "contact": "Contato"
   },
   "hero": {
-    "lead": "Para uma empresa que precisa de um site, de uma ferramenta de trabalho ou de um produto online. As conversas são em português, francês, inglês e espanhol.",
+    "lead": "Um site, um sistema sob medida ou um produto, feito com você à distância.",
     "project": "Falar de um projeto",
     "whatsapp": "Escrever no WhatsApp"
   },
@@ -64,7 +64,7 @@
     "title": "Presença",
     "place": "Niterói, Rio de Janeiro",
     "zone": "Fuso de São Paulo",
-    "text": "O trabalho é remoto. De manhã, o horário encontra a costa leste dos Estados Unidos. À tarde, encontra a Europa."
+    "text": "As ligações são em francês, português e inglês. O site também pode ser lido em espanhol. De manhã, o horário encontra a costa leste dos Estados Unidos. À tarde, encontra a Europa."
   },
   "contact": {
     "title": "Contato",

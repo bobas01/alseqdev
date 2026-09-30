@@ -1,7 +1,7 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "Sites, business applications and SaaS, remotely, from Niterói.",
-  "tagline": "Websites and applications, remotely, from Niterói.",
+  "metaDescription": "From the idea to going live. A website, a business tool, or a product, built with you remotely.",
+  "tagline": "From the idea to going live.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "All rights reserved.",
@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "lead": "For a company that needs a website, a business tool, or an online product. Conversations in Portuguese, French, English and Spanish.",
+    "lead": "A website, a business tool, or a product, built with you remotely.",
     "project": "Talk about a project",
     "whatsapp": "Message on WhatsApp"
   },
@@ -64,7 +64,7 @@
     "title": "Presence",
     "place": "Niterói, Rio de Janeiro",
     "zone": "São Paulo time zone",
-    "text": "The work is remote. Mornings overlap with the US East Coast. Afternoons overlap with Europe."
+    "text": "Calls are in French, Portuguese, and English. The site can also be read in Spanish. Mornings overlap with the US East Coast. Afternoons overlap with Europe."
   },
   "contact": {
     "title": "Contact",
