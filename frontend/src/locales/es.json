@@ -22,8 +22,8 @@
     "intro": "Cuatro formas de trabajar juntos.",
     "items": [
       {
-        "title": "Sitio de presentación",
-        "text": "Un sitio claro para presentar una actividad y recibir mensajes. Unas páginas, legibles en el teléfono, con una vía de contacto. La renovación de un sitio que ya está en línea forma parte de esto."
+        "title": "Sitio corporativo",
+        "text": "Un sitio claro para presentar un negocio y recibir mensajes. Unas páginas, fáciles de leer en el teléfono, con una forma de contacto. El rediseño de un sitio que ya está en línea entra en este servicio."
       },
       {
         "title": "Aplicación a medida",
@@ -34,8 +34,8 @@
         "text": "Lanzar un producto: cuentas, suscripciones, pago y administración. Primero una versión utilizable, luego crece."
       },
       {
-        "title": "Seguimiento",
-        "text": "Después de la publicación: copias de seguridad, actualizaciones, correcciones y cambios pequeños. Un plan mensual, sin permanencia larga."
+        "title": "Mantenimiento",
+        "text": "Después de la publicación: copias de seguridad, actualizaciones, correcciones y cambios pequeños. Un plan mensual, sin un contrato largo."
       }
     ]
   },
@@ -43,8 +43,8 @@
     "title": "Método",
     "items": [
       {
-        "title": "Encaje",
-        "text": "Aclaramos la necesidad, a quién se dirige y qué debe estar en línea primero."
+        "title": "Definición",
+        "text": "Aclaramos la necesidad, a quién va dirigido y qué tiene que estar en línea primero."
       },
       {
         "title": "Presupuesto",
@@ -56,15 +56,15 @@
       },
       {
         "title": "Entrega",
-        "text": "Publicación, accesos, y la continuación si desea un seguimiento."
+        "text": "Publicación, accesos, y lo que sigue si quiere mantenimiento."
       }
     ]
   },
   "presence": {
     "title": "Presencia",
     "place": "Niterói, Rio de Janeiro",
-    "zone": "Huso de São Paulo",
-    "text": "El trabajo es a distancia. La mañana coincide con la costa este de Estados Unidos. La tarde coincide con Europa."
+    "zone": "Huso horario de São Paulo",
+    "text": "El trabajo es a distancia. Por la mañana coincide con la costa este de Estados Unidos. Por la tarde coincide con Europa."
   },
   "contact": {
     "title": "Contacto",
@@ -73,6 +73,6 @@
     "email": "Correo",
     "message": "Mensaje",
     "submit": "Abrir WhatsApp",
-    "direct": "O escribir directamente"
+    "direct": "O escribir directo"
   }
 }

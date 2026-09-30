@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "lead": "For a company that needs a website, a working tool, or an online product. Conversations in Portuguese, French, English and Spanish.",
+    "lead": "For a company that needs a website, a business tool, or an online product. Conversations in Portuguese, French, English and Spanish.",
     "project": "Talk about a project",
     "whatsapp": "Message on WhatsApp"
   },
@@ -22,8 +22,8 @@
     "intro": "Four ways to work together.",
     "items": [
       {
-        "title": "Brochure site",
-        "text": "A clear site to present a business and receive messages. A few pages, readable on a phone, with a way to get in touch. Rebuilding a site that is already online is part of this."
+        "title": "Company website",
+        "text": "A clear site to present a business and receive messages. A few pages, easy to read on a phone, with a way to get in touch. Rebuilding a site that is already online is included."
       },
       {
         "title": "Business application",
@@ -34,8 +34,8 @@
         "text": "Launch a product: accounts, subscriptions, payment and administration. First a version people can use, then it grows."
       },
       {
-        "title": "Care",
-        "text": "After launch: backups, updates, fixes and small changes. A monthly plan, with no long commitment."
+        "title": "Maintenance",
+        "text": "After launch: backups, updates, fixes and small changes. A monthly plan, without a long contract."
       }
     ]
   },
@@ -56,7 +56,7 @@
       },
       {
         "title": "Delivery",
-        "text": "Launch, access, and what comes next if you want ongoing care."
+        "text": "Launch, access, and what comes next if you want maintenance."
       }
     ]
   },
@@ -73,6 +73,6 @@
     "email": "Email",
     "message": "Message",
     "submit": "Open WhatsApp",
-    "direct": "Or write directly"
+    "direct": "Or message directly"
   }
 }

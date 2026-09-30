@@ -23,19 +23,19 @@
     "items": [
       {
         "title": "Site institucional",
-        "text": "Um site claro para apresentar uma atividade e receber mensagens. Algumas páginas, legíveis no telefone, com um meio de contato. A reforma de um site que já está no ar faz parte disso."
+        "text": "Um site claro para apresentar um negócio e receber mensagens. Algumas páginas, fáceis de ler no celular, com um jeito de entrar em contato. A reformulação de um site que já está no ar entra nesse serviço."
       },
       {
-        "title": "Aplicação sob medida",
-        "text": "Uma ferramenta que segue o seu jeito de trabalhar: área do cliente, painel, reservas ou acompanhamento. O orçamento parte da necessidade, não de um número de páginas."
+        "title": "Sistema sob medida",
+        "text": "Uma ferramenta que segue o seu jeito de trabalhar: área do cliente, painel, reservas ou controle. O orçamento nasce da necessidade, não de um número de páginas."
       },
       {
         "title": "SaaS",
         "text": "Lançar um produto: contas, assinaturas, pagamento e administração. Primeiro uma versão utilizável, depois ela cresce."
       },
       {
-        "title": "Acompanhamento",
-        "text": "Depois da publicação: cópias de segurança, atualizações, correções e pequenas mudanças. Um plano mensal, sem fidelidade longa."
+        "title": "Manutenção",
+        "text": "Depois da publicação: backups, atualizações, correções e pequenas mudanças. Um plano mensal, sem contrato longo."
       }
     ]
   },
@@ -56,7 +56,7 @@
       },
       {
         "title": "Entrega",
-        "text": "Publicação, acessos, e a continuidade se você quiser acompanhamento."
+        "text": "Publicação, acessos, e o que vem depois se você quiser manutenção."
       }
     ]
   },
@@ -64,7 +64,7 @@
     "title": "Presença",
     "place": "Niterói, Rio de Janeiro",
     "zone": "Fuso de São Paulo",
-    "text": "O trabalho é remoto. A manhã cruza a costa leste dos Estados Unidos. A tarde cruza a Europa."
+    "text": "O trabalho é remoto. De manhã, o horário encontra a costa leste dos Estados Unidos. À tarde, encontra a Europa."
   },
   "contact": {
     "title": "Contato",
