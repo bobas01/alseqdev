@@ -1,8 +1,78 @@
 {
   "metaTitle": "ALSEQ DEV",
+  "metaDescription": "Sites, business applications and SaaS, remotely, from Niterói.",
   "tagline": "Websites and applications, remotely, from Niterói.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "All rights reserved.",
-  "languages": "Languages"
+  "languages": "Languages",
+  "nav": {
+    "label": "Sections",
+    "services": "Services",
+    "method": "Method",
+    "contact": "Contact"
+  },
+  "hero": {
+    "lead": "For a company that needs a website, a working tool, or an online product. Conversations in Portuguese, French, English and Spanish.",
+    "project": "Talk about a project",
+    "whatsapp": "Message on WhatsApp"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Four ways to work together.",
+    "items": [
+      {
+        "title": "Brochure site",
+        "text": "A clear site to present a business and receive messages. A few pages, readable on a phone, with a way to get in touch. Rebuilding a site that is already online is part of this."
+      },
+      {
+        "title": "Business application",
+        "text": "A tool that follows how you work: client area, dashboard, bookings or tracking. The quote starts from the need, not from a page count."
+      },
+      {
+        "title": "SaaS",
+        "text": "Launch a product: accounts, subscriptions, payment and administration. First a version people can use, then it grows."
+      },
+      {
+        "title": "Care",
+        "text": "After launch: backups, updates, fixes and small changes. A monthly plan, with no long commitment."
+      }
+    ]
+  },
+  "method": {
+    "title": "Method",
+    "items": [
+      {
+        "title": "Scope",
+        "text": "We clarify the need, the people it is for, and what must be online first."
+      },
+      {
+        "title": "Quote",
+        "text": "A written scope, a timeline and a price, before the work starts."
+      },
+      {
+        "title": "Build",
+        "text": "The work moves in visible steps. You review it as it grows."
+      },
+      {
+        "title": "Delivery",
+        "text": "Launch, access, and what comes next if you want ongoing care."
+      }
+    ]
+  },
+  "presence": {
+    "title": "Presence",
+    "place": "Niterói, Rio de Janeiro",
+    "zone": "São Paulo time zone",
+    "text": "The work is remote. Mornings overlap with the US East Coast. Afternoons overlap with Europe."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Describe the project. The message opens in WhatsApp, ready to send.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Open WhatsApp",
+    "direct": "Or write directly"
+  }
 }

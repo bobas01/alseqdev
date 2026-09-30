@@ -1,8 +1,78 @@
 {
   "metaTitle": "ALSEQ DEV",
+  "metaDescription": "Sites, applications métier et SaaS, à distance, depuis Niterói.",
   "tagline": "Sites et applications, à distance, depuis Niterói.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Tous droits réservés.",
-  "languages": "Langues"
+  "languages": "Langues",
+  "nav": {
+    "label": "Sections",
+    "services": "Services",
+    "method": "Méthode",
+    "contact": "Contact"
+  },
+  "hero": {
+    "lead": "Pour une entreprise qui a besoin d’un site, d’un outil de travail ou d’un produit en ligne. Les échanges se font en français, portugais, anglais et espagnol.",
+    "project": "Parler d’un projet",
+    "whatsapp": "Écrire sur WhatsApp"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Quatre façons de travailler ensemble.",
+    "items": [
+      {
+        "title": "Site vitrine",
+        "text": "Un site clair pour présenter une activité et recevoir des messages. Quelques pages, lisibles sur téléphone, avec un moyen de contact. La refonte d’un site déjà en ligne en fait partie."
+      },
+      {
+        "title": "Application métier",
+        "text": "Un outil qui suit votre façon de travailler : espace client, tableau de bord, réservations ou suivi. Le devis part du besoin, pas d’un nombre de pages."
+      },
+      {
+        "title": "SaaS",
+        "text": "Lancer un produit : comptes, abonnements, paiement et administration. D’abord une version utilisable, puis on l’élargit."
+      },
+      {
+        "title": "Suivi",
+        "text": "Après la mise en ligne : sauvegardes, mises à jour, corrections et petites modifications. Un forfait mensuel, sans engagement."
+      }
+    ]
+  },
+  "method": {
+    "title": "Méthode",
+    "items": [
+      {
+        "title": "Cadrage",
+        "text": "On clarifie le besoin, les personnes visées et ce qui doit être en ligne en premier."
+      },
+      {
+        "title": "Devis",
+        "text": "Un périmètre écrit, un délai et un prix, avant de commencer."
+      },
+      {
+        "title": "Réalisation",
+        "text": "Le travail avance par étapes visibles. Vous validez au fur et à mesure."
+      },
+      {
+        "title": "Livraison",
+        "text": "Mise en ligne, accès, et la suite si vous souhaitez un suivi."
+      }
+    ]
+  },
+  "presence": {
+    "title": "Présence",
+    "place": "Niterói, Rio de Janeiro",
+    "zone": "Fuseau de São Paulo",
+    "text": "Le travail se fait à distance. Le matin croise la côte est des États-Unis. L’après-midi croise l’Europe."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Décrivez le projet. Le message s’ouvre dans WhatsApp, prêt à envoyer.",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "submit": "Ouvrir WhatsApp",
+    "direct": "Ou écrire directement"
+  }
 }

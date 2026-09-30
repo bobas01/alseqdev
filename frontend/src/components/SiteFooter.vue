@@ -4,7 +4,7 @@
     <p>{{ t("location") }}</p>
     <a
       class="whatsapp"
-      href="https://wa.me/5562991525466"
+      :href="whatsappUrl()"
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -17,6 +17,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import LogoMark from "./LogoMark.vue";
+import { whatsappUrl } from "../whatsapp";
 
 const { t } = useI18n();
 const year = new Date().getFullYear();

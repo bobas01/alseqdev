@@ -1,8 +1,78 @@
 {
   "metaTitle": "ALSEQ DEV",
+  "metaDescription": "Sites, aplicações de negócio e SaaS, à distância, a partir de Niterói.",
   "tagline": "Sites e aplicações, à distância, a partir de Niterói.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Todos os direitos reservados.",
-  "languages": "Idiomas"
+  "languages": "Idiomas",
+  "nav": {
+    "label": "Seções",
+    "services": "Serviços",
+    "method": "Método",
+    "contact": "Contato"
+  },
+  "hero": {
+    "lead": "Para uma empresa que precisa de um site, de uma ferramenta de trabalho ou de um produto online. As conversas são em português, francês, inglês e espanhol.",
+    "project": "Falar de um projeto",
+    "whatsapp": "Escrever no WhatsApp"
+  },
+  "services": {
+    "title": "Serviços",
+    "intro": "Quatro formas de trabalhar juntos.",
+    "items": [
+      {
+        "title": "Site institucional",
+        "text": "Um site claro para apresentar uma atividade e receber mensagens. Algumas páginas, legíveis no telefone, com um meio de contato. A reforma de um site que já está no ar faz parte disso."
+      },
+      {
+        "title": "Aplicação sob medida",
+        "text": "Uma ferramenta que segue o seu jeito de trabalhar: área do cliente, painel, reservas ou acompanhamento. O orçamento parte da necessidade, não de um número de páginas."
+      },
+      {
+        "title": "SaaS",
+        "text": "Lançar um produto: contas, assinaturas, pagamento e administração. Primeiro uma versão utilizável, depois ela cresce."
+      },
+      {
+        "title": "Acompanhamento",
+        "text": "Depois da publicação: cópias de segurança, atualizações, correções e pequenas mudanças. Um plano mensal, sem fidelidade longa."
+      }
+    ]
+  },
+  "method": {
+    "title": "Método",
+    "items": [
+      {
+        "title": "Alinhamento",
+        "text": "Esclarecemos a necessidade, o público e o que precisa estar no ar primeiro."
+      },
+      {
+        "title": "Proposta",
+        "text": "Um escopo escrito, um prazo e um preço, antes de começar."
+      },
+      {
+        "title": "Construção",
+        "text": "O trabalho avança em etapas visíveis. Você valida ao longo do caminho."
+      },
+      {
+        "title": "Entrega",
+        "text": "Publicação, acessos, e a continuidade se você quiser acompanhamento."
+      }
+    ]
+  },
+  "presence": {
+    "title": "Presença",
+    "place": "Niterói, Rio de Janeiro",
+    "zone": "Fuso de São Paulo",
+    "text": "O trabalho é remoto. A manhã cruza a costa leste dos Estados Unidos. A tarde cruza a Europa."
+  },
+  "contact": {
+    "title": "Contato",
+    "intro": "Descreva o projeto. A mensagem abre no WhatsApp, pronta para enviar.",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "submit": "Abrir o WhatsApp",
+    "direct": "Ou escrever direto"
+  }
 }

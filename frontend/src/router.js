@@ -6,6 +6,12 @@ const localePattern = LOCALES.join("|");
 
 export const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(to) {
+    if (to.hash) {
+      return { el: to.hash, top: 88, behavior: "smooth" };
+    }
+    return { top: 0 };
+  },
   routes: [
     { path: "/", redirect: "/pt-br" },
     {
@@ -23,5 +29,9 @@ router.beforeEach((to) => {
     i18n.global.locale.value = locale;
     document.documentElement.lang = htmlLanguage(locale);
     document.title = i18n.global.t("metaTitle");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute("content", i18n.global.t("metaDescription"));
+    }
   }
 });
