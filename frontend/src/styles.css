@@ -305,14 +305,19 @@ main {
   right: 16px;
   bottom: 16px;
   z-index: 3;
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 18px;
-  border-radius: 999px;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
   background: #128c7e;
   color: #ffffff;
   box-shadow: 0 8px 24px rgba(20, 26, 34, 0.18);
+}
+
+.wa-float svg {
+  width: 32px;
+  height: 32px;
 }
 
 .site-footer {
