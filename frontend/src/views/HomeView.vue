@@ -80,7 +80,7 @@
           <p v-if="status !== 'idle' && status !== 'sending'" class="form-status" role="status">
             {{ t(`contact.${status}`) }}
           </p>
-          <p class="kept">{{ t("contact.kept") }}</p>
+          <router-link class="kept" :to="`/${locale}/confidentialite`">{{ t("contact.kept") }}</router-link>
         </form>
         <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
           {{ t("contact.direct") }}

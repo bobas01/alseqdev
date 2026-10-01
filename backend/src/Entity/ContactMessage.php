@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
+use App\Repository\ContactMessageRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity]
+#[ORM\Entity(repositoryClass: ContactMessageRepository::class)]
 #[ORM\Table(name: 'contact_message')]
 class ContactMessage
 {
@@ -50,5 +51,25 @@ class ContactMessage
     public function getCreatedAt(): \DateTimeImmutable
     {
         return $this->createdAt;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    public function getLocale(): string
+    {
+        return $this->locale;
     }
 }

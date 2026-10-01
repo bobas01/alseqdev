@@ -83,5 +83,31 @@
     "direct": "Ou écrire sur WhatsApp",
     "float": "WhatsApp",
     "prefill": "Bonjour, je voudrais parler d’un projet."
+  },
+  "footer": {
+    "legal": "Informations",
+    "privacy": "Confidentialité",
+    "notice": "Mentions"
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "paragraphs": [
+      "Alexandre Sequeira propose ses services sous le nom ALSEQ DEV, depuis Niterói, Rio de Janeiro, au Brésil. Pour une question sur ces données : alseqdev@gmail.com.",
+      "Le formulaire demande le nom, l’adresse e-mail et le message. Le site enregistre aussi la langue de la page, la date d’envoi, et une empreinte de l’adresse IP. L’adresse IP elle-même n’est pas conservée.",
+      "Ces informations servent à lire la demande et à y répondre. Elles ne sont pas vendues et ne servent pas à faire de la publicité. Le site ne mesure pas l’audience.",
+      "Le message est gardé un an, puis supprimé. Avant ce délai, une demande envoyée à alseqdev@gmail.com permet de le lire, de le corriger ou de le supprimer.",
+      "Un cookie technique protège le formulaire. Il ne suit pas la navigation. Il n’y a pas de cookie publicitaire.",
+      "Un clic sur WhatsApp ouvre la conversation chez WhatsApp. C’est alors leur service qui s’applique.",
+      "Au Brésil, ce traitement suit la Lei Geral de Proteção de Dados (LGPD). Pour une personne dans l’Union européenne, le Règlement général sur la protection des données (RGPD) s’applique aussi : accès, rectification, effacement, limitation, opposition, et réclamation auprès de l’autorité de son pays. Le message est traité depuis le Brésil."
+    ]
+  },
+  "notice": {
+    "title": "Mentions",
+    "paragraphs": [
+      "ALSEQ DEV est le nom utilisé par Alexandre Sequeira pour le développement web à distance, depuis Niterói, Rio de Janeiro, au Brésil.",
+      "Contact : alseqdev@gmail.com et WhatsApp +55 62 99152-5466.",
+      "Le site décrit les services. Les prix sont donnés sur devis, après un échange.",
+      "Les textes et le logo appartiennent à Alexandre Sequeira."
+    ]
   }
 }

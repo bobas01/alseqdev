@@ -278,6 +278,87 @@ main {
 .contact .kept {
   margin: 0;
   font-size: 14px;
+  color: var(--navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  width: fit-content;
+}
+
+.legal {
+  max-width: 68ch;
+}
+
+.legal p {
+  line-height: 1.65;
+}
+
+.legal-links {
+  display: flex;
+  gap: 16px;
+}
+
+.legal-links a {
+  color: var(--gold);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.admin {
+  max-width: 720px;
+}
+
+.admin form,
+.admin-message {
+  display: grid;
+  gap: 14px;
+  max-width: 420px;
+  margin-top: 28px;
+}
+
+.admin label {
+  display: grid;
+  gap: 6px;
+}
+
+.admin input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(27, 58, 95, 0.25);
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.admin-bar {
+  margin: 20px 0;
+}
+
+.admin-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.admin-list button {
+  width: 100%;
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid rgba(27, 58, 95, 0.15);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.admin-body {
+  white-space: pre-wrap;
 }
 
 .form-status {

@@ -83,5 +83,31 @@
     "direct": "O escribir por WhatsApp",
     "float": "WhatsApp",
     "prefill": "Hola, quiero hablar de un proyecto."
+  },
+  "footer": {
+    "legal": "Información",
+    "privacy": "Privacidad",
+    "notice": "Aviso legal"
+  },
+  "privacy": {
+    "title": "Privacidad",
+    "paragraphs": [
+      "Alexandre Sequeira ofrece sus servicios con el nombre ALSEQ DEV, desde Niterói, Río de Janeiro, Brasil. Para una pregunta sobre estos datos: alseqdev@gmail.com.",
+      "El formulario pide el nombre, el correo y el mensaje. El sitio también guarda el idioma de la página, la fecha de envío y una huella de la dirección IP. La dirección IP en sí no se conserva.",
+      "Estos datos sirven para leer la solicitud y responder. No se venden y no se usan para publicidad. El sitio no mide la audiencia.",
+      "El mensaje se conserva un año y después se borra. Antes de ese plazo, una solicitud enviada a alseqdev@gmail.com permite leerlo, corregirlo o borrarlo.",
+      "Una cookie técnica protege el formulario. No sigue la navegación. No hay cookie publicitaria.",
+      "Un clic en WhatsApp abre la conversación en WhatsApp. A partir de ahí se aplica su servicio.",
+      "En Brasil, este tratamiento sigue la Lei Geral de Proteção de Dados (LGPD). Para una persona en la Unión Europea, también se aplica el Reglamento general de protección de datos (RGPD): acceso, rectificación, supresión, limitación, oposición y reclamación ante la autoridad de su país. El mensaje se trata desde Brasil."
+    ]
+  },
+  "notice": {
+    "title": "Aviso legal",
+    "paragraphs": [
+      "ALSEQ DEV es el nombre que usa Alexandre Sequeira para el desarrollo web a distancia, desde Niterói, Río de Janeiro, Brasil.",
+      "Contacto: alseqdev@gmail.com y WhatsApp +55 62 99152-5466.",
+      "El sitio describe los servicios. Los precios se dan en un presupuesto, después de una conversación.",
+      "Los textos y el logo pertenecen a Alexandre Sequeira."
+    ]
   }
 }

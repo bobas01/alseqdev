@@ -4,15 +4,15 @@
       <LogoMark theme="light" />
     </router-link>
     <nav class="site-nav" :aria-label="t('nav.label')">
-      <a href="#services">{{ t("nav.services") }}</a>
-      <a href="#methode">{{ t("nav.method") }}</a>
-      <a href="#contact">{{ t("nav.contact") }}</a>
+      <a :href="`/${locale}#services`">{{ t("nav.services") }}</a>
+      <a :href="`/${locale}#methode`">{{ t("nav.method") }}</a>
+      <a :href="`/${locale}#contact`">{{ t("nav.contact") }}</a>
     </nav>
     <nav class="languages" :aria-label="t('languages')">
       <router-link
         v-for="item in locales"
         :key="item.code"
-        :to="`/${item.code}`"
+        :to="localeTo(item.code)"
         :class="{ active: item.code === locale }"
         :hreflang="item.lang"
         :lang="item.lang"
@@ -32,6 +32,13 @@ import LogoMark from "./LogoMark.vue";
 const { t } = useI18n();
 const route = useRoute();
 const locale = computed(() => route.params.locale ?? "pt-br");
+
+function localeTo(code) {
+  if (route.name === "privacy" || route.name === "notice") {
+    return { name: route.name, params: { locale: code } };
+  }
+  return `/${code}`;
+}
 
 const locales = [
   { code: "pt-br", label: "PT", lang: "pt-BR" },

@@ -1,16 +1,21 @@
 <template>
   <div class="app">
-    <SiteHeader />
+    <SiteHeader v-if="!isAdmin" />
     <main id="contenu">
       <router-view />
     </main>
-    <SiteFooter />
-    <WhatsAppFloat />
+    <SiteFooter v-if="!isAdmin" />
+    <WhatsAppFloat v-if="!isAdmin" />
   </div>
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 import SiteFooter from "./components/SiteFooter.vue";
 import SiteHeader from "./components/SiteHeader.vue";
 import WhatsAppFloat from "./components/WhatsAppFloat.vue";
+
+const route = useRoute();
+const isAdmin = computed(() => route.path.startsWith("/admin"));
 </script>
