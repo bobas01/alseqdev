@@ -6,12 +6,14 @@
     </main>
     <SiteFooter v-if="!isAdmin" />
     <WhatsAppFloat v-if="!isAdmin" />
+    <BackToTop v-if="!isAdmin" />
   </div>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useRoute } from "vue-router";
+import BackToTop from "./components/BackToTop.vue";
 import SiteFooter from "./components/SiteFooter.vue";
 import SiteHeader from "./components/SiteHeader.vue";
 import WhatsAppFloat from "./components/WhatsAppFloat.vue";

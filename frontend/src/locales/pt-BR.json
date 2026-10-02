@@ -1,10 +1,12 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "Da ideia à publicação. Um site, um sistema ou um produto, feito com você à distância.",
-  "tagline": "Da ideia à publicação.",
+  "metaDescription": "Da ideia à publicação, à distância. Um site, um sistema sob medida ou um produto, feito com você.",
+  "taglineLine1": "Da ideia à publicação",
+  "taglineLine2": "à distância.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Todos os direitos reservados.",
+  "toTop": "Voltar ao topo",
   "languages": "Idiomas",
   "nav": {
     "label": "Seções",
@@ -13,34 +15,56 @@
     "contact": "Contato"
   },
   "hero": {
-    "lead": "Um site, um sistema sob medida ou um produto, feito com você à distância.",
+    "lead": "Um site, um sistema sob medida ou um produto feito com você.",
+    "more": "Um site para apresentar uma atividade, um sistema no ritmo do seu trabalho, ou um produto com contas e pagamento. Primeiro uma versão utilizável, feita com você, depois a gente amplia.",
     "project": "Falar de um projeto",
     "whatsapp": "Escrever no WhatsApp"
   },
   "services": {
     "title": "Serviços",
-    "intro": "Quatro formas de trabalhar juntos.",
+    "intro": "Do site institucional à manutenção mensal.",
     "items": [
       {
+        "kicker": "Institucional",
         "title": "Site institucional",
-        "text": "Um site claro para apresentar um negócio e receber mensagens. Algumas páginas, fáceis de ler no celular, com um jeito de entrar em contato. A reformulação de um site que já está no ar entra nesse serviço."
+        "points": [
+          "Algumas páginas, fáceis de ler no celular",
+          "Um jeito de receber mensagens",
+          "A reformulação de um site que já está no ar"
+        ]
       },
       {
+        "kicker": "Sistema",
         "title": "Sistema sob medida",
-        "text": "Uma ferramenta que segue o seu jeito de trabalhar: área do cliente, painel, reservas ou controle. O orçamento nasce da necessidade, não de um número de páginas."
+        "points": [
+          "Área do cliente, painel, reservas ou controle",
+          "No ritmo do seu trabalho",
+          "O orçamento nasce da necessidade, não de um número de páginas"
+        ]
       },
       {
+        "kicker": "Produto",
         "title": "SaaS",
-        "text": "Lançar um produto: contas, assinaturas, pagamento e administração. Primeiro uma versão utilizável, depois ela cresce."
+        "points": [
+          "Contas, assinaturas e pagamento",
+          "Uma administração para cuidar do produto",
+          "Primeiro uma versão utilizável, depois ela cresce"
+        ]
       },
       {
+        "kicker": "Mensal",
         "title": "Manutenção",
-        "text": "Depois da publicação: backups, atualizações, correções e pequenas mudanças. Um plano mensal, sem contrato longo."
+        "points": [
+          "Backups e atualizações",
+          "Correções e pequenas mudanças",
+          "Um plano mensal, sem contrato longo"
+        ]
       }
     ]
   },
   "method": {
     "title": "Método",
+    "step": "Etapa",
     "items": [
       {
         "title": "Alinhamento",

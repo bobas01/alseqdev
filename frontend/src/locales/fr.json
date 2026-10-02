@@ -1,10 +1,12 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "De l’idée à la mise en ligne. Un site, un outil métier ou un produit, à distance.",
-  "tagline": "De l’idée à la mise en ligne.",
+  "metaDescription": "De l’idée à la mise en ligne, à distance. Un site, un outil métier ou un produit, mené avec vous.",
+  "taglineLine1": "De l’idée à la mise en ligne",
+  "taglineLine2": "à distance.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Tous droits réservés.",
+  "toTop": "Haut de la page",
   "languages": "Langues",
   "nav": {
     "label": "Sections",
@@ -13,34 +15,56 @@
     "contact": "Contact"
   },
   "hero": {
-    "lead": "Un site, un outil métier ou un produit, mené avec vous à distance.",
+    "lead": "Un site, un outil métier ou un produit mené avec vous.",
+    "more": "Un site pour présenter une activité, un outil calé sur votre façon de travailler, ou un produit avec comptes et paiement. D’abord une version utilisable, construite avec vous, puis on l’élargit.",
     "project": "Parler d’un projet",
     "whatsapp": "Écrire sur WhatsApp"
   },
   "services": {
     "title": "Services",
-    "intro": "Quatre façons de travailler ensemble.",
+    "intro": "Du site vitrine au suivi mensuel.",
     "items": [
       {
+        "kicker": "Vitrine",
         "title": "Site vitrine",
-        "text": "Un site clair pour présenter une activité et recevoir des messages. Quelques pages, lisibles sur téléphone, avec un moyen de contact. La refonte d’un site déjà en ligne en fait partie."
+        "points": [
+          "Quelques pages, lisibles sur téléphone",
+          "Un moyen de recevoir des messages",
+          "La refonte d’un site déjà en ligne"
+        ]
       },
       {
+        "kicker": "Outil",
         "title": "Application métier",
-        "text": "Un outil qui suit votre façon de travailler : espace client, tableau de bord, réservations ou suivi. Le devis part du besoin, pas d’un nombre de pages."
+        "points": [
+          "Espace client, tableau de bord, réservations ou suivi",
+          "Calé sur votre façon de travailler",
+          "Le devis part du besoin, pas d’un nombre de pages"
+        ]
       },
       {
+        "kicker": "Produit",
         "title": "SaaS",
-        "text": "Lancer un produit : comptes, abonnements, paiement et administration. D’abord une version utilisable, puis on l’élargit."
+        "points": [
+          "Comptes, abonnements et paiement",
+          "Une administration pour le gérer",
+          "D’abord une version utilisable, puis on l’élargit"
+        ]
       },
       {
+        "kicker": "Mensuel",
         "title": "Suivi",
-        "text": "Après la mise en ligne : sauvegardes, mises à jour, corrections et petites modifications. Un forfait mensuel, sans engagement."
+        "points": [
+          "Sauvegardes et mises à jour",
+          "Corrections et petites modifications",
+          "Un forfait mensuel, sans engagement"
+        ]
       }
     ]
   },
   "method": {
     "title": "Méthode",
+    "step": "Étape",
     "items": [
       {
         "title": "Cadrage",

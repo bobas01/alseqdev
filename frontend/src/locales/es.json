@@ -1,10 +1,12 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "De la idea a la publicación. Un sitio, una herramienta o un producto, hecho con usted a distancia.",
-  "tagline": "De la idea a la publicación.",
+  "metaDescription": "De la idea a la publicación, a distancia. Un sitio, una herramienta de trabajo o un producto, hecho con usted.",
+  "taglineLine1": "De la idea a la publicación",
+  "taglineLine2": "a distancia.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "Todos los derechos reservados.",
+  "toTop": "Volver arriba",
   "languages": "Idiomas",
   "nav": {
     "label": "Secciones",
@@ -13,34 +15,56 @@
     "contact": "Contacto"
   },
   "hero": {
-    "lead": "Un sitio, una herramienta de trabajo o un producto, hecho con usted a distancia.",
+    "lead": "Un sitio, una herramienta de trabajo o un producto hecho con usted.",
+    "more": "Un sitio para presentar una actividad, una herramienta ajustada a su forma de trabajar, o un producto con cuentas y pago. Primero una versión utilizable, hecha con usted, y después se amplía.",
     "project": "Hablar de un proyecto",
     "whatsapp": "Escribir por WhatsApp"
   },
   "services": {
     "title": "Servicios",
-    "intro": "Cuatro formas de trabajar juntos.",
+    "intro": "Del sitio corporativo al mantenimiento mensual.",
     "items": [
       {
+        "kicker": "Corporativo",
         "title": "Sitio corporativo",
-        "text": "Un sitio claro para presentar un negocio y recibir mensajes. Unas páginas, fáciles de leer en el teléfono, con una forma de contacto. El rediseño de un sitio que ya está en línea entra en este servicio."
+        "points": [
+          "Unas páginas, fáciles de leer en el teléfono",
+          "Una forma de recibir mensajes",
+          "El rediseño de un sitio que ya está en línea"
+        ]
       },
       {
+        "kicker": "Herramienta",
         "title": "Aplicación a medida",
-        "text": "Una herramienta que sigue su forma de trabajar: área de cliente, panel, reservas o seguimiento. El presupuesto parte de la necesidad, no de un número de páginas."
+        "points": [
+          "Área de cliente, panel, reservas o seguimiento",
+          "Ajustada a su forma de trabajar",
+          "El presupuesto parte de la necesidad, no de un número de páginas"
+        ]
       },
       {
+        "kicker": "Producto",
         "title": "SaaS",
-        "text": "Lanzar un producto: cuentas, suscripciones, pago y administración. Primero una versión utilizable, luego crece."
+        "points": [
+          "Cuentas, suscripciones y pago",
+          "Una administración para gestionarlo",
+          "Primero una versión utilizable, luego crece"
+        ]
       },
       {
+        "kicker": "Mensual",
         "title": "Mantenimiento",
-        "text": "Después de la publicación: copias de seguridad, actualizaciones, correcciones y cambios pequeños. Un plan mensual, sin un contrato largo."
+        "points": [
+          "Copias de seguridad y actualizaciones",
+          "Correcciones y cambios pequeños",
+          "Un plan mensual, sin un contrato largo"
+        ]
       }
     ]
   },
   "method": {
     "title": "Método",
+    "step": "Etapa",
     "items": [
       {
         "title": "Definición",

@@ -1,10 +1,15 @@
 <template>
   <div>
-    <section class="band band-paper" id="accueil">
+    <section class="band band-paper hero-band" id="accueil">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="wrap hero">
-        <h1>{{ t("tagline") }}</h1>
+        <h1 class="shine">
+          <span class="tagline-line">{{ t("taglineLine1") }}</span>
+          <span class="tagline-line">{{ t("taglineLine2") }}</span>
+        </h1>
         <span class="hero-rule" aria-hidden="true"></span>
         <p class="lead">{{ t("hero.lead") }}</p>
+        <p class="hero-more">{{ t("hero.more") }}</p>
         <div class="actions">
           <a class="btn btn-ink" href="#contact">{{ t("hero.project") }}</a>
           <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
@@ -18,10 +23,13 @@
       <div class="wrap">
         <h2>{{ t("services.title") }}</h2>
         <p class="intro">{{ t("services.intro") }}</p>
-        <ul class="cards">
+        <ul class="cards seq">
           <li v-for="item in services" :key="item.title">
+            <p class="card-kicker">{{ item.kicker }}</p>
             <h3>{{ item.title }}</h3>
-            <p>{{ item.text }}</p>
+            <ul class="card-points">
+              <li v-for="point in item.points" :key="point">{{ point }}</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -31,9 +39,10 @@
       <div class="wrap">
         <h2>{{ t("method.title") }}</h2>
         <ol class="steps">
-          <li v-for="(item, index) in method" :key="item.title">
+          <li v-for="(item, index) in method" :key="item.title" class="reveal">
             <span class="step-index">{{ index + 1 }}</span>
-            <div>
+            <div class="step-body">
+              <p class="step-kicker">{{ t("method.step") }} {{ index + 1 }}</p>
               <h3>{{ item.title }}</h3>
               <p>{{ item.text }}</p>
             </div>
@@ -42,7 +51,8 @@
       </div>
     </section>
 
-    <section class="band band-ink" id="presence">
+    <section class="band band-ink presence-band" id="presence">
+      <img class="presence-map" src="/presence-brazil.svg" alt="" aria-hidden="true" />
       <div class="wrap presence">
         <h2>{{ t("presence.title") }}</h2>
         <p class="place">{{ t("presence.place") }}</p>
@@ -55,7 +65,43 @@
       <div class="wrap contact">
         <h2>{{ t("contact.title") }}</h2>
         <p class="intro">{{ t("contact.intro") }}</p>
-        <form @submit.prevent="submitContact">
+        <div class="contact-grid">
+          <div class="who">
+            <p class="who-name">ALSEQ DEV</p>
+            <ul class="who-list">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2.5c-3.6 0-6.5 2.8-6.5 6.3 0 4.7 6.5 12.7 6.5 12.7s6.5-8 6.5-12.7c0-3.5-2.9-6.3-6.5-6.3zm0 8.6a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6z"
+                  />
+                </svg>
+                <span>{{ t("location") }}</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M3 5.5h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1zm9 7.2 8.2-5.7H3.8L12 12.7z"
+                  />
+                </svg>
+                <a href="mailto:alseqdev@gmail.com">alseqdev@gmail.com</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M8.2 3.5h2.1c.4 0 .8.3.9.7l.8 2.4a1 1 0 0 1-.3 1L10.2 9a12 12 0 0 0 4.8 4.8l1.4-1.5a1 1 0 0 1 1-.3l2.4.8c.4.1.7.5.7.9v2.1c0 .6-.4 1-1 1C11.2 16.8 7.2 12.8 7.2 4.5c0-.6.4-1 1-1z"
+                  />
+                </svg>
+                <a :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">+55 62 99152-5466</a>
+              </li>
+            </ul>
+            <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
+              {{ t("contact.direct") }}
+            </a>
+          </div>
+          <form @submit.prevent="submitContact">
           <label>
             {{ t("contact.name") }}
             <input v-model="form.name" name="name" type="text" required maxlength="80" autocomplete="name" />
@@ -82,9 +128,7 @@
           </p>
           <router-link class="kept" :to="`/${locale}/confidentialite`">{{ t("contact.kept") }}</router-link>
         </form>
-        <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
-          {{ t("contact.direct") }}
-        </a>
+        </div>
       </div>
     </section>
   </div>
@@ -109,6 +153,30 @@ const token = ref("");
 const openedAt = Date.now();
 
 onMounted(async () => {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+
+  const nodes = document.querySelectorAll(".reveal, .cards.seq");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) {
+    nodes.forEach((node) => node.classList.add("is-in"));
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) {
+            continue;
+          }
+          entry.target.classList.add("is-in");
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.35, rootMargin: "0px 0px -20% 0px" },
+    );
+    nodes.forEach((node) => observer.observe(node));
+  }
+
   try {
     const response = await fetch("/api/contact/token", { credentials: "same-origin" });
     if (!response.ok) {

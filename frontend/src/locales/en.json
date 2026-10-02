@@ -1,10 +1,12 @@
 {
   "metaTitle": "ALSEQ DEV",
-  "metaDescription": "From the idea to going live. A website, a business tool, or a product, built with you remotely.",
-  "tagline": "From the idea to going live.",
+  "metaDescription": "From the idea to going live, remotely. A website, a business tool, or a product, built with you.",
+  "taglineLine1": "From the idea to going live",
+  "taglineLine2": "remotely.",
   "location": "Niterói, Rio de Janeiro",
   "whatsapp": "WhatsApp",
   "rights": "All rights reserved.",
+  "toTop": "Back to top",
   "languages": "Languages",
   "nav": {
     "label": "Sections",
@@ -13,34 +15,56 @@
     "contact": "Contact"
   },
   "hero": {
-    "lead": "A website, a business tool, or a product, built with you remotely.",
+    "lead": "A website, a business tool or a product built with you.",
+    "more": "A site to present a business, a tool shaped around how you work, or a product with accounts and payment. First a version people can use, built with you, then it grows.",
     "project": "Talk about a project",
     "whatsapp": "Message on WhatsApp"
   },
   "services": {
     "title": "Services",
-    "intro": "Four ways to work together.",
+    "intro": "From a company website to monthly maintenance.",
     "items": [
       {
+        "kicker": "Website",
         "title": "Company website",
-        "text": "A clear site to present a business and receive messages. A few pages, easy to read on a phone, with a way to get in touch. Rebuilding a site that is already online is included."
+        "points": [
+          "A few pages, easy to read on a phone",
+          "A way to receive messages",
+          "Rebuilding a site that is already online"
+        ]
       },
       {
+        "kicker": "Tool",
         "title": "Business application",
-        "text": "A tool that follows how you work: client area, dashboard, bookings or tracking. The quote starts from the need, not from a page count."
+        "points": [
+          "Client area, dashboard, bookings or tracking",
+          "Shaped around how you work",
+          "The quote starts from the need, not from a page count"
+        ]
       },
       {
+        "kicker": "Product",
         "title": "SaaS",
-        "text": "Launch a product: accounts, subscriptions, payment and administration. First a version people can use, then it grows."
+        "points": [
+          "Accounts, subscriptions and payment",
+          "An admin area to run it",
+          "First a version people can use, then it grows"
+        ]
       },
       {
+        "kicker": "Monthly",
         "title": "Maintenance",
-        "text": "After launch: backups, updates, fixes and small changes. A monthly plan, without a long contract."
+        "points": [
+          "Backups and updates",
+          "Fixes and small changes",
+          "A monthly plan, without a long contract"
+        ]
       }
     ]
   },
   "method": {
     "title": "Method",
+    "step": "Step",
     "items": [
       {
         "title": "Scope",
