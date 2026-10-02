@@ -14,7 +14,10 @@ WORKDIR /app
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-RUN install-php-extensions intl opcache
+RUN install-php-extensions intl opcache zip \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends unzip \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY docker/php.ini /usr/local/etc/php/conf.d/alseq.ini
 COPY backend/composer.json backend/composer.lock backend/symfony.lock ./
