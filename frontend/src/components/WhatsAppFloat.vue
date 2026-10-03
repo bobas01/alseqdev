@@ -1,23 +1,17 @@
 <template>
-  <a
-    class="wa-float"
-    :href="whatsappUrl(t('contact.prefill'))"
-    :aria-label="t('contact.float')"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <button class="wa-float" type="button" :aria-label="t('contact.float')" :aria-expanded="guide.open" @click="openGuide">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path
         fill="currentColor"
         d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10 10 0 0 0 4.65 1.18h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.89c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.41-.14-.95-.31-1.63-.61-2.87-1.24-4.74-4.13-4.88-4.32-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.24-.27.64-.39.85-.39h.61c.19 0 .45-.07.7.53.26.64.88 2.2.96 2.36.08.16.13.35.03.56-.1.21-.15.34-.3.52-.14.18-.31.4-.44.54-.14.14-.29.3-.12.58.16.27.73 1.2 1.56 1.94 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.61-.07.16-.19.7-.81.89-1.09.19-.27.38-.23.64-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.36z"
       />
     </svg>
-  </a>
+  </button>
 </template>
 
 <script setup>
 import { useI18n } from "vue-i18n";
-import { whatsappUrl } from "../whatsapp";
+import { guide, openGuide } from "../chat";
 
 const { t } = useI18n();
 </script>

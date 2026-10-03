@@ -12,7 +12,24 @@
     "label": "Sections",
     "services": "Services",
     "method": "Méthode",
+    "blog": "Blog",
     "contact": "Contact"
+  },
+  "blog": {
+    "title": "Blog",
+    "all": "Tous",
+    "categoriesLabel": "Catégories",
+    "empty": "Aucun article pour le moment.",
+    "missing": "Cet article n’est pas en ligne.",
+    "back": "Retour au blog",
+    "sources": "Sources",
+    "categories": {
+      "developpement": "Développement",
+      "devops": "DevOps",
+      "cybersecurite": "Cybersécurité",
+      "ia": "IA",
+      "produit": "Produit"
+    }
   },
   "hero": {
     "lead": "Un site, un outil métier ou un produit mené avec vous.",
@@ -108,6 +125,131 @@
     "float": "WhatsApp",
     "prefill": "Bonjour, je voudrais parler d’un projet."
   },
+  "guide": {
+    "title": "Préparer le message",
+    "close": "Fermer",
+    "send": "Envoyer sur WhatsApp",
+    "restart": "Recommencer",
+    "placeholder": "Écrivez en une phrase",
+    "continue": "Continuer",
+    "hello": "Bonjour. Restons sur le site. Quelques questions, et le message pour WhatsApp est prêt.",
+    "askKind": "Qu’est-ce que vous voulez mettre en place ?",
+    "aside": "Le site reste ouvert. WhatsApp s’ouvre à côté, dans le navigateur. Il ne peut pas s’afficher à l’intérieur de cette page.",
+    "askSite": "C’est un site vitrine nouveau, ou la refonte d’un site déjà en ligne ?",
+    "askActivity": "En une phrase, quelle activité doit-il présenter ?",
+    "askShop": "En une phrase, qu’est-ce que la boutique vend ?",
+    "askExisting": "Qu’est-ce que vous voulez en faire ?",
+    "askAbout": "En une phrase, de quoi s’agit-il ?",
+    "askClients": "En une phrase, que doivent pouvoir faire vos clients ?",
+    "askBooking": "En une phrase, qu’est-ce qu’on réserve ?",
+    "askDaily": "En une phrase, qu’est-ce que vous voulez suivre ?",
+    "askPayment": "En une phrase, qui paie, et pour quoi ?",
+    "askNeed": "Décrivez le besoin en une phrase.",
+    "askSiteParts": "Que voulez-vous sur ce site ? Plusieurs choix possibles.",
+    "askShopOrder": "Comment est-ce qu’on commande ?",
+    "askShopReceive": "Livraison, retrait, ou les deux ?",
+    "askFocus": "Qu’est-ce qui doit changer en premier ? Plusieurs choix possibles.",
+    "askClientParts": "Que doivent pouvoir faire vos clients ? Plusieurs choix possibles.",
+    "askClientActivity": "En une phrase, pour quelle activité ?",
+    "askBookHow": "Comment la personne réserve ?",
+    "askDailyWho": "Qui doit voir ça ?",
+    "askPayRhythm": "C’est un paiement une fois, ou chaque mois ?",
+    "donePicks": "C’est tout",
+    "draftLead": "Voici le message. Vous pouvez l’envoyer tel quel.",
+    "kind": {
+      "site": "Un site vitrine",
+      "shop": "Une boutique en ligne",
+      "existing": "Un site déjà en ligne",
+      "clients": "Un espace pour vos clients",
+      "booking": "Des réservations",
+      "daily": "Voir l’activité au jour le jour",
+      "payment": "Des comptes et un paiement",
+      "tool": "Un outil déjà en place",
+      "other": "Autre"
+    },
+    "siteMode": {
+      "new": "Un site vitrine nouveau",
+      "redesign": "Une refonte"
+    },
+    "existingWork": {
+      "redo": "Le refaire",
+      "add": "Y ajouter quelque chose",
+      "fix": "Réparer ce qui ne marche plus"
+    },
+    "siteParts": {
+      "who": "Qui vous êtes",
+      "offer": "Ce que vous proposez",
+      "hours": "Les horaires et l’adresse",
+      "photos": "Des photos",
+      "write": "Un moyen de vous écrire",
+      "prices": "Les prix"
+    },
+    "shopOrder": {
+      "pay": "On paie sur le site",
+      "later": "On commande, on paie ensuite",
+      "write": "On écrit pour commander"
+    },
+    "shopReceive": {
+      "delivery": "Livraison",
+      "pickup": "Retrait sur place",
+      "both": "Les deux"
+    },
+    "siteFocus": {
+      "clear": "Le rendre plus clair",
+      "phone": "Qu’il marche bien sur téléphone",
+      "pages": "Ajouter des pages",
+      "broken": "Réparer ce qui est cassé"
+    },
+    "toolFocus": {
+      "clear": "Le rendre plus clair",
+      "missing": "Ajouter ce qui manque",
+      "broken": "Réparer ce qui est cassé",
+      "follow": "Voir l’activité plus facilement"
+    },
+    "clientParts": {
+      "docs": "Voir leurs documents",
+      "status": "Voir où en est leur demande",
+      "write": "Vous écrire",
+      "book": "Prendre un rendez-vous",
+      "pay": "Payer"
+    },
+    "bookHow": {
+      "alone": "Elle choisit un créneau seule",
+      "confirm": "Elle demande, vous confirmez"
+    },
+    "dailyWho": {
+      "me": "Vous seul",
+      "team": "Vous et votre équipe",
+      "clients": "Vos clients aussi"
+    },
+    "payRhythm": {
+      "once": "Une fois",
+      "month": "Chaque mois",
+      "both": "Les deux"
+    },
+    "draft": {
+      "shop": "Bonjour. Je souhaite une boutique en ligne. Elle vend : {line}. Commande : {order}. Réception : {receive}.",
+      "other": "Bonjour. Autre demande : {line}",
+      "clients": "Bonjour. Je souhaite un espace pour les clients. Ils doivent pouvoir : {parts}. Activité : {line}",
+      "booking": "Bonjour. Je souhaite prendre des réservations. On réserve : {line}. La personne : {how}.",
+      "daily": "Bonjour. Je souhaite voir l’activité au jour le jour. À suivre : {line}. Qui regarde : {who}.",
+      "payment": "Bonjour. Je souhaite des comptes et un paiement. Qui paie, et pour quoi : {line}. Rythme : {rhythm}.",
+      "site": {
+        "new": "Bonjour. Je souhaite un site vitrine. Activité : {line}. Sur le site : {parts}.",
+        "redesign": "Bonjour. Je souhaite la refonte d’un site vitrine déjà en ligne. Activité : {line}. Sur le site : {parts}."
+      },
+      "existing": {
+        "redo": "Bonjour. Je souhaite refaire un site déjà en ligne. {line}. En premier : {parts}.",
+        "add": "Bonjour. Je souhaite ajouter quelque chose à un site déjà en ligne. {line}. En premier : {parts}.",
+        "fix": "Bonjour. Je souhaite réparer un site déjà en ligne. {line}. En premier : {parts}."
+      },
+      "tool": {
+        "redo": "Bonjour. Je souhaite refaire un outil déjà en place. {line}. En premier : {parts}.",
+        "add": "Bonjour. Je souhaite ajouter quelque chose à un outil déjà en place. {line}. En premier : {parts}.",
+        "fix": "Bonjour. Je souhaite réparer un outil déjà en place. {line}. En premier : {parts}."
+      }
+    }
+  },
   "footer": {
     "legal": "Informations",
     "privacy": "Confidentialité",
@@ -121,7 +263,7 @@
       "Ces informations servent à lire la demande et à y répondre. Elles ne sont pas vendues et ne servent pas à faire de la publicité. Le site ne mesure pas l’audience.",
       "Le message est gardé un an, puis supprimé. Avant ce délai, une demande envoyée à alseqdev@gmail.com permet de le lire, de le corriger ou de le supprimer.",
       "Un cookie technique protège le formulaire. Il ne suit pas la navigation. Il n’y a pas de cookie publicitaire.",
-      "Un clic sur WhatsApp ouvre la conversation chez WhatsApp. C’est alors leur service qui s’applique.",
+      "Un clic sur WhatsApp ouvre d’abord un court échange sur le site. L’envoi ouvre ensuite la conversation chez WhatsApp, avec le message déjà écrit. C’est alors leur service qui s’applique.",
       "Au Brésil, ce traitement suit la Lei Geral de Proteção de Dados (LGPD). Pour une personne dans l’Union européenne, le Règlement général sur la protection des données (RGPD) s’applique aussi : accès, rectification, effacement, limitation, opposition, et réclamation auprès de l’autorité de son pays. Le message est traité depuis le Brésil."
     ]
   },

@@ -927,10 +927,170 @@ h3 {
   height: 56px;
   display: grid;
   place-items: center;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background: #128c7e;
   color: #ffffff;
+  cursor: pointer;
   box-shadow: 0 8px 24px rgba(20, 26, 34, 0.18);
+}
+
+.guide {
+  position: fixed;
+  right: 16px;
+  bottom: 84px;
+  z-index: 4;
+  width: min(380px, calc(100% - 32px));
+  height: min(560px, calc(100svh - 120px));
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(20, 26, 34, 0.28);
+  overflow: hidden;
+}
+
+.guide-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #128c7e;
+  color: #ffffff;
+  font-family: var(--font-sub);
+}
+
+.guide-head p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.guide-head button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.guide-log {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.guide-bubble {
+  max-width: 86%;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.guide-bubble.bot {
+  align-self: flex-start;
+  background: #ffffff;
+  color: var(--navy);
+}
+
+.guide-bubble.user {
+  align-self: flex-end;
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.guide-choices,
+.guide-form,
+.guide-done {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 16px 16px;
+}
+
+.guide-choices {
+  max-height: 52%;
+  overflow: auto;
+}
+
+.guide-choices button,
+.guide-form input {
+  min-height: 40px;
+  border: 1px solid rgba(27, 58, 95, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-family: var(--font-sub);
+  font-size: 15px;
+}
+
+.guide-choices button {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.guide-choices button:hover,
+.guide-choices button.is-on {
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.guide-choices button.is-on {
+  background: rgba(198, 161, 90, 0.18);
+}
+
+.guide-confirm {
+  margin: 0 16px 16px;
+}
+
+.guide-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.guide-done {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.guide-aside {
+  margin: 0;
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.guide-done .btn-wa {
+  color: #ffffff;
+}
+
+.guide-restart {
+  min-height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
 }
 
 .wa-float svg {
@@ -988,6 +1148,11 @@ h3 {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
 }
 
 .rights {

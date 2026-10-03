@@ -12,7 +12,24 @@
     "label": "Seções",
     "services": "Serviços",
     "method": "Método",
+    "blog": "Blog",
     "contact": "Contato"
+  },
+  "blog": {
+    "title": "Blog",
+    "all": "Todos",
+    "categoriesLabel": "Categorias",
+    "empty": "Nenhum artigo por enquanto.",
+    "missing": "Este artigo não está no ar.",
+    "back": "Voltar ao blog",
+    "sources": "Fontes",
+    "categories": {
+      "developpement": "Desenvolvimento",
+      "devops": "DevOps",
+      "cybersecurite": "Cibersegurança",
+      "ia": "IA",
+      "produit": "Produto"
+    }
   },
   "hero": {
     "lead": "Um site, um sistema sob medida ou um produto feito com você.",
@@ -108,6 +125,131 @@
     "float": "WhatsApp",
     "prefill": "Olá, quero falar de um projeto."
   },
+  "guide": {
+    "title": "Preparar a mensagem",
+    "close": "Fechar",
+    "send": "Enviar no WhatsApp",
+    "restart": "Recomeçar",
+    "placeholder": "Escreva em uma frase",
+    "continue": "Continuar",
+    "hello": "Olá. Ficamos no site. Algumas perguntas, e a mensagem para o WhatsApp fica pronta.",
+    "askKind": "O que você quer colocar no ar?",
+    "aside": "O site continua aberto. O WhatsApp abre ao lado, no navegador. Ele não pode aparecer dentro desta página.",
+    "askSite": "É um site institucional novo, ou a reforma de um site que já está no ar?",
+    "askActivity": "Em uma frase, qual atividade ele deve apresentar?",
+    "askShop": "Em uma frase, o que a loja vende?",
+    "askExisting": "O que você quer fazer com ele?",
+    "askAbout": "Em uma frase, do que se trata?",
+    "askClients": "Em uma frase, o que os clientes devem poder fazer?",
+    "askBooking": "Em uma frase, o que se reserva?",
+    "askDaily": "Em uma frase, o que você quer acompanhar?",
+    "askPayment": "Em uma frase, quem paga, e pelo quê?",
+    "askNeed": "Descreva a necessidade em uma frase.",
+    "askSiteParts": "O que você quer neste site? Pode escolher vários.",
+    "askShopOrder": "Como a pessoa faz o pedido?",
+    "askShopReceive": "Entrega, retirada, ou as duas?",
+    "askFocus": "O que deve mudar primeiro? Pode escolher vários.",
+    "askClientParts": "O que os clientes devem poder fazer? Pode escolher vários.",
+    "askClientActivity": "Em uma frase, para qual atividade?",
+    "askBookHow": "Como a pessoa reserva?",
+    "askDailyWho": "Quem deve ver isso?",
+    "askPayRhythm": "É um pagamento uma vez, ou todo mês?",
+    "donePicks": "É isso",
+    "draftLead": "Aqui está a mensagem. Você pode enviá-la assim.",
+    "kind": {
+      "site": "Um site institucional",
+      "shop": "Uma loja online",
+      "existing": "Um site que já está no ar",
+      "clients": "Um espaço para os clientes",
+      "booking": "Reservas",
+      "daily": "Ver a atividade do dia a dia",
+      "payment": "Contas e um pagamento",
+      "tool": "Uma ferramenta que já existe",
+      "other": "Outro"
+    },
+    "siteMode": {
+      "new": "Um site institucional novo",
+      "redesign": "Uma reforma"
+    },
+    "existingWork": {
+      "redo": "Refazê-lo",
+      "add": "Acrescentar alguma coisa",
+      "fix": "Corrigir o que não funciona mais"
+    },
+    "siteParts": {
+      "who": "Quem você é",
+      "offer": "O que você oferece",
+      "hours": "Horários e endereço",
+      "photos": "Fotos",
+      "write": "Um meio de escrever para você",
+      "prices": "Os preços"
+    },
+    "shopOrder": {
+      "pay": "Paga no site",
+      "later": "Pede agora, paga depois",
+      "write": "Escreve para pedir"
+    },
+    "shopReceive": {
+      "delivery": "Entrega",
+      "pickup": "Retirada",
+      "both": "As duas"
+    },
+    "siteFocus": {
+      "clear": "Deixar mais claro",
+      "phone": "Funcionar bem no telefone",
+      "pages": "Acrescentar páginas",
+      "broken": "Corrigir o que está quebrado"
+    },
+    "toolFocus": {
+      "clear": "Deixar mais claro",
+      "missing": "Acrescentar o que falta",
+      "broken": "Corrigir o que está quebrado",
+      "follow": "Ver a atividade com mais facilidade"
+    },
+    "clientParts": {
+      "docs": "Ver os documentos",
+      "status": "Ver em que ponto está o pedido",
+      "write": "Escrever para você",
+      "book": "Marcar um horário",
+      "pay": "Pagar"
+    },
+    "bookHow": {
+      "alone": "Ela escolhe um horário sozinha",
+      "confirm": "Ela pede, você confirma"
+    },
+    "dailyWho": {
+      "me": "Só você",
+      "team": "Você e a equipe",
+      "clients": "Os clientes também"
+    },
+    "payRhythm": {
+      "once": "Uma vez",
+      "month": "Todo mês",
+      "both": "Os dois"
+    },
+    "draft": {
+      "shop": "Olá. Quero uma loja online. Ela vende: {line}. Pedido: {order}. Recebimento: {receive}.",
+      "other": "Olá. Outro pedido: {line}",
+      "clients": "Olá. Quero um espaço para os clientes. Eles devem poder: {parts}. Atividade: {line}",
+      "booking": "Olá. Quero receber reservas. O que se reserva: {line}. A pessoa: {how}.",
+      "daily": "Olá. Quero ver a atividade do dia a dia. Para acompanhar: {line}. Quem vê: {who}.",
+      "payment": "Olá. Quero contas e um pagamento. Quem paga, e pelo quê: {line}. Ritmo: {rhythm}.",
+      "site": {
+        "new": "Olá. Quero um site institucional. Atividade: {line}. No site: {parts}.",
+        "redesign": "Olá. Quero reformar um site institucional que já está no ar. Atividade: {line}. No site: {parts}."
+      },
+      "existing": {
+        "redo": "Olá. Quero refazer um site que já está no ar. {line}. Primeiro: {parts}.",
+        "add": "Olá. Quero acrescentar alguma coisa a um site que já está no ar. {line}. Primeiro: {parts}.",
+        "fix": "Olá. Quero corrigir um site que já está no ar. {line}. Primeiro: {parts}."
+      },
+      "tool": {
+        "redo": "Olá. Quero refazer uma ferramenta que já existe. {line}. Primeiro: {parts}.",
+        "add": "Olá. Quero acrescentar alguma coisa a uma ferramenta que já existe. {line}. Primeiro: {parts}.",
+        "fix": "Olá. Quero corrigir uma ferramenta que já existe. {line}. Primeiro: {parts}."
+      }
+    }
+  },
   "footer": {
     "legal": "Informações",
     "privacy": "Privacidade",
@@ -121,7 +263,7 @@
       "Essas informações servem para ler o pedido e responder. Elas não são vendidas e não servem para publicidade. O site não mede a audiência.",
       "A mensagem fica guardada por um ano e depois é apagada. Antes disso, um pedido enviado a alseqdev@gmail.com permite lê-la, corrigi-la ou apagá-la.",
       "Um cookie técnico protege o formulário. Ele não acompanha a navegação. Não há cookie de publicidade.",
-      "Um clique no WhatsApp abre a conversa no WhatsApp. A partir daí, vale o serviço deles.",
+      "Um clique no WhatsApp abre primeiro uma troca curta no site. O envio abre em seguida a conversa no WhatsApp, com a mensagem já escrita. A partir daí, vale o serviço deles.",
       "No Brasil, este tratamento segue a Lei Geral de Proteção de Dados (LGPD). Para uma pessoa na União Europeia, o Regulamento Geral de Proteção de Dados (RGPD) também se aplica: acesso, correção, exclusão, limitação, oposição e reclamação à autoridade do seu país. A mensagem é tratada a partir do Brasil."
     ]
   },

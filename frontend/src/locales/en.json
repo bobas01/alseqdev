@@ -12,7 +12,24 @@
     "label": "Sections",
     "services": "Services",
     "method": "Method",
+    "blog": "Blog",
     "contact": "Contact"
+  },
+  "blog": {
+    "title": "Blog",
+    "all": "All",
+    "categoriesLabel": "Categories",
+    "empty": "No articles yet.",
+    "missing": "This article is not online.",
+    "back": "Back to the blog",
+    "sources": "Sources",
+    "categories": {
+      "developpement": "Development",
+      "devops": "DevOps",
+      "cybersecurite": "Cybersecurity",
+      "ia": "AI",
+      "produit": "Product"
+    }
   },
   "hero": {
     "lead": "A website, a business tool or a product built with you.",
@@ -108,6 +125,131 @@
     "float": "WhatsApp",
     "prefill": "Hello, I would like to talk about a project."
   },
+  "guide": {
+    "title": "Prepare the message",
+    "close": "Close",
+    "send": "Send on WhatsApp",
+    "restart": "Start again",
+    "placeholder": "Write it in one sentence",
+    "continue": "Continue",
+    "hello": "Hello. Let’s stay on the site. A few questions, and the WhatsApp message is ready.",
+    "askKind": "What do you want to set up?",
+    "aside": "The site stays open. WhatsApp opens beside it, in the browser. It cannot be shown inside this page.",
+    "askSite": "Is it a new showcase website, or a redesign of one already online?",
+    "askActivity": "In one sentence, what activity should it present?",
+    "askShop": "In one sentence, what does the shop sell?",
+    "askExisting": "What do you want to do with it?",
+    "askAbout": "In one sentence, what is it about?",
+    "askClients": "In one sentence, what should your clients be able to do?",
+    "askBooking": "In one sentence, what is being booked?",
+    "askDaily": "In one sentence, what do you want to follow?",
+    "askPayment": "In one sentence, who pays, and for what?",
+    "askNeed": "Describe the need in one sentence.",
+    "askSiteParts": "What do you want on this website? You can pick several.",
+    "askShopOrder": "How does someone order?",
+    "askShopReceive": "Delivery, pickup, or both?",
+    "askFocus": "What should change first? You can pick several.",
+    "askClientParts": "What should your clients be able to do? You can pick several.",
+    "askClientActivity": "In one sentence, for which activity?",
+    "askBookHow": "How does the person book?",
+    "askDailyWho": "Who should see this?",
+    "askPayRhythm": "Is it a one-time payment, or every month?",
+    "donePicks": "That’s all",
+    "draftLead": "Here is the message. You can send it as it is.",
+    "kind": {
+      "site": "A showcase website",
+      "shop": "An online shop",
+      "existing": "A website already online",
+      "clients": "A place for your clients",
+      "booking": "Bookings",
+      "daily": "See the day-to-day activity",
+      "payment": "Accounts and a payment",
+      "tool": "A tool already in place",
+      "other": "Something else"
+    },
+    "siteMode": {
+      "new": "A new showcase website",
+      "redesign": "A redesign"
+    },
+    "existingWork": {
+      "redo": "Rebuild it",
+      "add": "Add something to it",
+      "fix": "Fix what no longer works"
+    },
+    "siteParts": {
+      "who": "Who you are",
+      "offer": "What you offer",
+      "hours": "Hours and address",
+      "photos": "Photos",
+      "write": "A way to write to you",
+      "prices": "Prices"
+    },
+    "shopOrder": {
+      "pay": "Pay on the website",
+      "later": "Order now, pay later",
+      "write": "Write in order to buy"
+    },
+    "shopReceive": {
+      "delivery": "Delivery",
+      "pickup": "Pickup",
+      "both": "Both"
+    },
+    "siteFocus": {
+      "clear": "Make it clearer",
+      "phone": "Make it work well on a phone",
+      "pages": "Add pages",
+      "broken": "Fix what is broken"
+    },
+    "toolFocus": {
+      "clear": "Make it clearer",
+      "missing": "Add what is missing",
+      "broken": "Fix what is broken",
+      "follow": "See the activity more easily"
+    },
+    "clientParts": {
+      "docs": "See their documents",
+      "status": "See where their request stands",
+      "write": "Write to you",
+      "book": "Book a time",
+      "pay": "Pay"
+    },
+    "bookHow": {
+      "alone": "They pick a time on their own",
+      "confirm": "They ask, you confirm"
+    },
+    "dailyWho": {
+      "me": "You alone",
+      "team": "You and your team",
+      "clients": "Your clients as well"
+    },
+    "payRhythm": {
+      "once": "Once",
+      "month": "Every month",
+      "both": "Both"
+    },
+    "draft": {
+      "shop": "Hello. I want an online shop. It sells: {line}. Order: {order}. Receiving: {receive}.",
+      "other": "Hello. Other request: {line}",
+      "clients": "Hello. I want a place for clients. They should be able to: {parts}. Activity: {line}",
+      "booking": "Hello. I want to take bookings. What is booked: {line}. The person: {how}.",
+      "daily": "Hello. I want to see the day-to-day activity. To follow: {line}. Who looks: {who}.",
+      "payment": "Hello. I want accounts and a payment. Who pays, and for what: {line}. Rhythm: {rhythm}.",
+      "site": {
+        "new": "Hello. I want a showcase website. Activity: {line}. On the website: {parts}.",
+        "redesign": "Hello. I want a redesign of a showcase website already online. Activity: {line}. On the website: {parts}."
+      },
+      "existing": {
+        "redo": "Hello. I want to rebuild a website already online. {line}. First: {parts}.",
+        "add": "Hello. I want to add something to a website already online. {line}. First: {parts}.",
+        "fix": "Hello. I want to fix a website already online. {line}. First: {parts}."
+      },
+      "tool": {
+        "redo": "Hello. I want to rebuild a tool already in place. {line}. First: {parts}.",
+        "add": "Hello. I want to add something to a tool already in place. {line}. First: {parts}.",
+        "fix": "Hello. I want to fix a tool already in place. {line}. First: {parts}."
+      }
+    }
+  },
   "footer": {
     "legal": "Information",
     "privacy": "Privacy",
@@ -121,7 +263,7 @@
       "This information is used to read the request and reply to it. It is not sold and it is not used for advertising. The site does not measure its audience.",
       "The message is kept for one year, then deleted. Before that, a request sent to alseqdev@gmail.com can ask to read it, correct it, or delete it.",
       "A technical cookie protects the form. It does not follow browsing. There is no advertising cookie.",
-      "A click on WhatsApp opens the conversation on WhatsApp. Their service then applies.",
+      "A click on WhatsApp first opens a short exchange on the site. Sending then opens the conversation on WhatsApp, with the message already written. Their service then applies.",
       "In Brazil, this processing follows the Lei Geral de Proteção de Dados (LGPD). For a person in the European Union, the General Data Protection Regulation (GDPR) also applies: access, rectification, erasure, restriction, objection, and a complaint to the authority in their country. The message is processed from Brazil."
     ]
   },

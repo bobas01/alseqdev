@@ -12,9 +12,9 @@
         <p class="hero-more">{{ t("hero.more") }}</p>
         <div class="actions">
           <a class="btn btn-ink" href="#contact">{{ t("hero.project") }}</a>
-          <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
+          <button class="btn btn-wa" type="button" @click="openGuide">
             {{ t("hero.whatsapp") }}
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -97,9 +97,9 @@
                 <a :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">+55 62 99152-5466</a>
               </li>
             </ul>
-            <a class="btn btn-wa" :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">
+            <button class="btn btn-wa" type="button" @click="openGuide">
               {{ t("contact.direct") }}
-            </a>
+            </button>
           </div>
           <form @submit.prevent="submitContact">
           <label>
@@ -137,6 +137,7 @@
 <script setup>
 import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { openGuide } from "../chat";
 import { whatsappUrl } from "../whatsapp";
 
 const { t, tm, locale } = useI18n();
