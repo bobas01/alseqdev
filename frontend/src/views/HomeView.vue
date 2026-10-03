@@ -39,7 +39,7 @@
       <div class="wrap">
         <h2>{{ t("method.title") }}</h2>
         <ol class="steps">
-          <li v-for="(item, index) in method" :key="item.title" class="reveal">
+          <li v-for="(item, index) in method" :key="index" class="reveal">
             <span class="step-index">{{ index + 1 }}</span>
             <div class="step-body">
               <p class="step-kicker">{{ t("method.step") }} {{ index + 1 }}</p>
@@ -135,7 +135,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, reactive, ref } from "vue";
+import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { whatsappUrl } from "../whatsapp";
 
@@ -152,30 +152,63 @@ const status = ref("idle");
 const token = ref("");
 const openedAt = Date.now();
 
+let cardObserver;
+let stepObserver;
+
+function watchMotion() {
+  cardObserver?.disconnect();
+  stepObserver?.disconnect();
+
+  const cards = document.querySelector(".cards.seq");
+  const steps = document.querySelectorAll(".reveal");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) {
+    cards?.classList.add("is-in");
+    steps.forEach((node) => node.classList.add("is-in"));
+    return;
+  }
+
+  cardObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) {
+          continue;
+        }
+        entry.target.classList.add("is-in");
+        cardObserver.unobserve(entry.target);
+      }
+    },
+    { threshold: 0, rootMargin: "0px 0px 80px 0px" },
+  );
+  stepObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) {
+          continue;
+        }
+        entry.target.classList.add("is-in");
+        stepObserver.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.2 },
+  );
+
+  if (cards && !cards.classList.contains("is-in")) {
+    cardObserver.observe(cards);
+  }
+  steps.forEach((node) => {
+    if (!node.classList.contains("is-in")) {
+      stepObserver.observe(node);
+    }
+  });
+}
+
 onMounted(async () => {
   if (!window.location.hash) {
     window.scrollTo(0, 0);
   }
 
-  const nodes = document.querySelectorAll(".reveal, .cards.seq");
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) {
-    nodes.forEach((node) => node.classList.add("is-in"));
-  } else {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) {
-            continue;
-          }
-          entry.target.classList.add("is-in");
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.35, rootMargin: "0px 0px -20% 0px" },
-    );
-    nodes.forEach((node) => observer.observe(node));
-  }
+  watchMotion();
 
   try {
     const response = await fetch("/api/contact/token", { credentials: "same-origin" });
@@ -187,6 +220,16 @@ onMounted(async () => {
   } catch {
     token.value = "";
   }
+});
+
+watch(locale, async () => {
+  await nextTick();
+  watchMotion();
+});
+
+onUnmounted(() => {
+  cardObserver?.disconnect();
+  stepObserver?.disconnect();
 });
 
 async function submitContact() {
