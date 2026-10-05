@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Correctif">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <circle cx="168" cy="180" r="92" fill="none" stroke="#C6A15A" stroke-width="10"/>
+  <circle cx="168" cy="180" r="8" fill="#C6A15A"/>
+  <text x="292" y="176" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="48">Correctif</text>
+  <text x="292" y="214" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">4 octobre</text>
+</svg>

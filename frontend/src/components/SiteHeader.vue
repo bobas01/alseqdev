@@ -6,6 +6,12 @@
     <nav class="site-nav" :aria-label="t('nav.label')">
       <a :href="`/${locale}#services`">{{ t("nav.services") }}</a>
       <a :href="`/${locale}#methode`">{{ t("nav.method") }}</a>
+      <router-link
+        :to="`/${locale}/blog`"
+        :aria-current="route.name === 'blog' || route.name === 'article' ? 'page' : undefined"
+      >
+        {{ t("nav.blog") }}
+      </router-link>
       <a :href="`/${locale}#contact`">{{ t("nav.contact") }}</a>
     </nav>
     <label class="languages">
@@ -23,6 +29,7 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
+import { blogNav } from "../blog";
 import LogoMark from "./LogoMark.vue";
 
 const { t } = useI18n();
@@ -31,8 +38,15 @@ const router = useRouter();
 const locale = computed(() => route.params.locale ?? "pt-br");
 
 function localeTo(code) {
-  if (route.name === "privacy" || route.name === "notice") {
+  if (route.name === "privacy" || route.name === "notice" || route.name === "blog") {
     return { name: route.name, params: { locale: code } };
+  }
+  if (route.name === "article") {
+    const slug = blogNav.translations[code];
+    if (slug) {
+      return { name: "article", params: { locale: code, slug } };
+    }
+    return { name: "blog", params: { locale: code } };
   }
   return `/${code}`;
 }

@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { htmlLanguage, i18n, LOCALES } from "./i18n";
 import AdminView from "./views/AdminView.vue";
+import ArticleView from "./views/ArticleView.vue";
+import BlogView from "./views/BlogView.vue";
 import HomeView from "./views/HomeView.vue";
 import LegalView from "./views/LegalView.vue";
 
@@ -30,6 +32,25 @@ export const router = createRouter({
       meta: { page: "notice" },
     },
     {
+      path: `/:locale(${localePattern})/journal/:slug`,
+      redirect: (to) => `/${to.params.locale}/blog/${to.params.slug}`,
+    },
+    {
+      path: `/:locale(${localePattern})/journal`,
+      redirect: (to) => ({ name: "blog", params: { locale: to.params.locale } }),
+    },
+    {
+      path: `/:locale(${localePattern})/blog/:slug`,
+      name: "article",
+      component: ArticleView,
+    },
+    {
+      path: `/:locale(${localePattern})/blog`,
+      name: "blog",
+      component: BlogView,
+      meta: { page: "blog" },
+    },
+    {
       path: `/:locale(${localePattern})`,
       name: "home",
       component: HomeView,
@@ -51,10 +72,14 @@ router.beforeEach((to) => {
   if (typeof locale === "string" && LOCALES.includes(locale)) {
     i18n.global.locale.value = locale;
     document.documentElement.lang = htmlLanguage(locale);
-    const page = typeof to.meta.page === "string" ? to.meta.page : "";
-    document.title = page
-      ? `${i18n.global.t(`${page}.title`)} — ALSEQ DEV`
-      : i18n.global.t("metaTitle");
+    if (to.name === "article") {
+      document.title = i18n.global.t("metaTitle");
+    } else {
+      const page = typeof to.meta.page === "string" ? to.meta.page : "";
+      document.title = page
+        ? `${i18n.global.t(`${page}.title`)} — ALSEQ DEV`
+        : i18n.global.t("metaTitle");
+    }
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute("content", i18n.global.t("metaDescription"));

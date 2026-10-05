@@ -740,6 +740,26 @@ h3 {
   text-decoration: none;
 }
 
+.blog-cover,
+.article-cover,
+.admin-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--navy);
+}
+
+.blog-cover {
+  margin-bottom: 14px;
+}
+
+.article-cover,
+.admin-cover {
+  margin-top: 18px;
+}
+
 .blog-list time,
 .article time {
   color: var(--gold);
@@ -826,7 +846,80 @@ h3 {
 }
 
 .admin {
-  max-width: 860px;
+  max-width: 1080px;
+}
+
+.admin-shell {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.admin-side {
+  display: grid;
+  gap: 8px;
+  position: sticky;
+  top: 96px;
+}
+
+.admin-side button {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(27, 58, 95, 0.2);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--navy);
+  font-family: var(--font-sub);
+  text-align: left;
+  cursor: pointer;
+}
+
+.admin-side button[aria-current="page"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--cream);
+}
+
+.admin-read {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.admin-group {
+  margin: 22px 0 10px;
+  color: var(--gold);
+  font-family: var(--font-sub);
+  font-size: 14px;
+}
+
+.admin-read h2 {
+  margin: 8px 0 0;
+  font-family: var(--font-title);
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.admin-read p,
+.admin-read li {
+  line-height: 1.65;
+}
+
+@media (max-width: 800px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-side {
+    position: static;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-side button:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 .admin form.admin-article {

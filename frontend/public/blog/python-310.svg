@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Python 3.10">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <rect x="0" y="0" width="18" height="360" fill="#C6A15A"/>
+  <text x="56" y="168" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="92">3.10</text>
+  <rect x="56" y="196" width="148" height="4" fill="#C6A15A"/>
+  <text x="56" y="236" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">dernière mise à jour</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Kubernetes 1.37">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <g fill="#C6A15A">
+    <rect x="48" y="64" width="36" height="232"/>
+    <rect x="100" y="112" width="36" height="184"/>
+    <rect x="152" y="160" width="36" height="136"/>
+  </g>
+  <text x="220" y="196" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="88">1.37</text>
+  <text x="224" y="236" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">avant la mise à jour</text>
+</svg>

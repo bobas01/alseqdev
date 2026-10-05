@@ -1,7 +1,7 @@
 <template>
   <section class="band band-paper">
     <div class="wrap admin">
-      <h1>Messages</h1>
+      <h1>{{ authenticated ? (section === "articles" ? "Articles" : "Messages") : "Messages" }}</h1>
       <form v-if="!authenticated" @submit.prevent="login">
         <label>
           E-mail
@@ -14,10 +14,15 @@
         <button class="btn btn-ink" type="submit" :disabled="busy">Entrer</button>
         <p v-if="error" class="form-status" role="status">{{ error }}</p>
       </form>
-      <template v-else>
-        <div class="admin-bar">
-          <button class="btn btn-ink" type="button" @click="logout">Sortir</button>
-        </div>
+      <div v-else class="admin-shell">
+        <nav class="admin-side" aria-label="Administration">
+          <button type="button" :aria-current="section === 'messages' ? 'page' : undefined" @click="section = 'messages'">Messages</button>
+          <button type="button" :aria-current="section === 'articles' ? 'page' : undefined" @click="section = 'articles'">Articles</button>
+          <button type="button" @click="logout">Sortir</button>
+        </nav>
+        <div>
+        <AdminArticles v-if="section === 'articles'" />
+        <template v-else>
         <p v-if="messages.length === 0">Aucun message.</p>
         <ul v-else class="admin-list">
           <li v-for="item in messages" :key="item.id">
@@ -36,13 +41,16 @@
           <p class="admin-body">{{ current.message }}</p>
           <button class="btn btn-ink" type="button" @click="removeMessage(current.id)">Supprimer</button>
         </article>
-      </template>
+        </template>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
+import AdminArticles from "../components/AdminArticles.vue";
 
 const email = ref("alseqdev@gmail.com");
 const password = ref("");
@@ -51,6 +59,13 @@ const busy = ref(false);
 const error = ref("");
 const messages = ref([]);
 const current = ref(null);
+const section = ref("messages");
+
+watch(section, (value) => {
+  if (authenticated.value) {
+    document.title = `${value === "articles" ? "Articles" : "Messages"} — ALSEQ DEV`;
+  }
+});
 
 onMounted(async () => {
   const response = await fetch("/api/admin/session", { credentials: "same-origin" });
