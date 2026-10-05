@@ -703,6 +703,12 @@ h3 {
   color: var(--navy);
   font-family: var(--font-sub);
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.blog-cats button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(20, 26, 34, 0.14);
 }
 
 .blog-cats button[aria-pressed="true"] {
@@ -738,6 +744,12 @@ h3 {
   background: #ffffff;
   color: inherit;
   text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-list a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(20, 26, 34, 0.14);
 }
 
 .blog-cover,
@@ -1345,7 +1357,9 @@ h3 {
   .btn,
   .site-nav a,
   .lang-select,
-  .cards > li {
+  .cards > li,
+  .blog-cats button,
+  .blog-list a {
     animation: none;
     transition: none;
   }
