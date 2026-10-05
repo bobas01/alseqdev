@@ -31,23 +31,23 @@
           {{ choice.label }}
         </button>
       </div>
-      <button
+      <SiteButton
         v-if="isMulti"
-        class="btn btn-ink guide-confirm"
+        class="guide-confirm"
         type="button"
         :disabled="picked.length === 0"
         @click="confirmPicks"
       >
         {{ t("guide.donePicks") }}
-      </button>
+      </SiteButton>
     </template>
     <form v-else-if="step === 'line'" class="guide-form" @submit.prevent="submitLine">
       <input v-model="line" type="text" maxlength="240" :placeholder="t('guide.placeholder')" required />
-      <button class="btn btn-ink" type="submit">{{ t("guide.continue") }}</button>
+      <SiteButton type="submit">{{ t("guide.continue") }}</SiteButton>
     </form>
     <div v-else class="guide-done">
       <p class="guide-aside">{{ t("guide.aside") }}</p>
-      <button class="btn btn-wa" type="button" @click="send">{{ t("guide.send") }}</button>
+      <SiteButton variant="wa" type="button" @click="send">{{ t("guide.send") }}</SiteButton>
       <button class="guide-restart" type="button" @click="boot">{{ t("guide.restart") }}</button>
     </div>
   </section>
@@ -57,6 +57,7 @@
 import { computed, nextTick, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { guide } from "../chat";
+import SiteButton from "./SiteButton.vue";
 import { whatsappWebUrl } from "../whatsapp";
 
 const { t } = useI18n();

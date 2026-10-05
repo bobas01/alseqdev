@@ -1,7 +1,7 @@
 <template>
   <div class="admin-articles">
     <div class="admin-bar">
-      <button class="btn btn-ink" type="button" @click="startNew">Nouvel article</button>
+      <SiteButton type="button" @click="startNew">Nouvel article</SiteButton>
     </div>
     <p v-if="articles.length === 0 && !editing && !reading">Aucun article.</p>
 
@@ -28,11 +28,11 @@
           </ul>
         </section>
         <div class="admin-actions">
-          <button class="btn btn-ink" type="button" @click="edit(reading.id)">Modifier</button>
-          <button class="btn btn-ink" type="button" @click="setPublished(reading.status !== 'published')">
+          <SiteButton type="button" @click="edit(reading.id)">Modifier</SiteButton>
+          <SiteButton type="button" @click="setPublished(reading.status !== 'published')">
             {{ reading.status === "published" ? "Remettre en brouillon" : "Publier" }}
-          </button>
-          <button class="btn btn-ink" type="button" @click="remove(reading.id)">Supprimer</button>
+          </SiteButton>
+          <SiteButton type="button" @click="remove(reading.id)">Supprimer</SiteButton>
         </div>
       </article>
     </template>
@@ -106,9 +106,9 @@
       </label>
       <p v-if="error" class="form-status" role="status">{{ error }}</p>
       <div class="admin-actions">
-        <button class="btn btn-ink" type="submit" :disabled="busy">Enregistrer</button>
-        <button class="btn btn-ink" type="button" @click="closeForm">Annuler</button>
-        <button v-if="form.id" class="btn btn-ink" type="button" @click="remove(form.id)">Supprimer</button>
+        <SiteButton type="submit" :disabled="busy">Enregistrer</SiteButton>
+        <SiteButton type="button" @click="closeForm">Annuler</SiteButton>
+        <SiteButton v-if="form.id" type="button" @click="remove(form.id)">Supprimer</SiteButton>
       </div>
     </form>
   </div>
@@ -117,6 +117,7 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import { BLOG_CATEGORIES, parseBlocks } from "../blog";
+import SiteButton from "./SiteButton.vue";
 
 const categories = BLOG_CATEGORIES;
 const labels = {

@@ -2,7 +2,7 @@
   <section class="band band-paper">
     <div class="wrap admin">
       <h1>{{ authenticated ? (section === "articles" ? "Articles" : "Messages") : "Messages" }}</h1>
-      <router-link class="admin-home" to="/">Retour au site</router-link>
+      <SiteButton class="admin-home" to="/">Retour au site</SiteButton>
       <form v-if="!authenticated" @submit.prevent="login">
         <label>
           E-mail
@@ -12,7 +12,7 @@
           Mot de passe
           <input v-model="password" type="password" autocomplete="current-password" required />
         </label>
-        <button class="btn btn-ink" type="submit" :disabled="busy">Entrer</button>
+        <SiteButton type="submit" :disabled="busy">Entrer</SiteButton>
         <p v-if="error" class="form-status" role="status">{{ error }}</p>
       </form>
       <div v-else class="admin-shell">
@@ -40,7 +40,7 @@
           <p>{{ current.email }}</p>
           <p>{{ formatDate(current.createdAt) }} · {{ current.locale }}</p>
           <p class="admin-body">{{ current.message }}</p>
-          <button class="btn btn-ink" type="button" @click="removeMessage(current.id)">Supprimer</button>
+          <SiteButton type="button" @click="removeMessage(current.id)">Supprimer</SiteButton>
         </article>
         </template>
         </div>
@@ -52,6 +52,7 @@
 <script setup>
 import { onMounted, ref, watch } from "vue";
 import AdminArticles from "../components/AdminArticles.vue";
+import SiteButton from "../components/SiteButton.vue";
 
 const email = ref("alseqdev@gmail.com");
 const password = ref("");

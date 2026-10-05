@@ -11,10 +11,10 @@
         <p class="lead">{{ t("hero.lead") }}</p>
         <p class="hero-more">{{ t("hero.more") }}</p>
         <div class="actions">
-          <a class="btn btn-ink" href="#contact">{{ t("hero.project") }}</a>
-          <button class="btn btn-wa" type="button" @click="openGuide">
+          <SiteButton href="#contact">{{ t("hero.project") }}</SiteButton>
+          <SiteButton variant="wa" type="button" @click="openGuide">
             {{ t("hero.whatsapp") }}
-          </button>
+          </SiteButton>
         </div>
       </div>
     </section>
@@ -97,9 +97,9 @@
                 <a :href="whatsappUrl()" target="_blank" rel="noopener noreferrer">+55 62 99152-5466</a>
               </li>
             </ul>
-            <button class="btn btn-wa" type="button" @click="openGuide">
+            <SiteButton variant="wa" type="button" @click="openGuide">
               {{ t("contact.direct") }}
-            </button>
+            </SiteButton>
           </div>
           <form @submit.prevent="submitContact">
           <label>
@@ -120,9 +120,9 @@
               <input v-model="form.faxNumber" name="fax_number" type="text" tabindex="-1" autocomplete="off" />
             </label>
           </div>
-          <button class="btn btn-ink" type="submit" :disabled="status === 'sending' || token === ''">
+          <SiteButton type="submit" :disabled="status === 'sending' || token === ''">
             {{ status === "sending" ? t("contact.sending") : t("contact.submit") }}
-          </button>
+          </SiteButton>
           <p v-if="status !== 'idle' && status !== 'sending'" class="form-status" role="status">
             {{ t(`contact.${status}`) }}
           </p>
@@ -138,6 +138,7 @@
 import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { openGuide } from "../chat";
+import SiteButton from "../components/SiteButton.vue";
 import { whatsappUrl } from "../whatsapp";
 
 const { t, tm, locale } = useI18n();

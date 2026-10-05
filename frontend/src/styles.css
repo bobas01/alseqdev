@@ -850,12 +850,7 @@ h3 {
 }
 
 .admin-home {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  margin-top: 12px;
-  color: var(--navy);
-  font-family: var(--font-sub);
+  margin-top: 16px;
 }
 
 .admin-shell {
