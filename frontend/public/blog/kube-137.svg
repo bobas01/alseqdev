@@ -1,46 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
   <rect width="640" height="360" fill="#1B3A5F"/>
-  <text x="48" y="78" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">KUBERNETES</text>
-  <text x="48" y="176" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="84">1.37</text>
-  <text x="48" y="230" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="28">18</text>
-  <g fill="none" stroke="#C6A15A" stroke-width="3">
-    <rect x="360" y="64" width="36" height="28" rx="4"/>
-    <rect x="408" y="64" width="36" height="28" rx="4"/>
-    <rect x="456" y="64" width="36" height="28" rx="4"/>
-    <rect x="504" y="64" width="36" height="28" rx="4"/>
-    <rect x="552" y="64" width="36" height="28" rx="4"/>
-    <rect x="360" y="108" width="36" height="28" rx="4"/>
-    <rect x="408" y="108" width="36" height="28" rx="4"/>
-    <rect x="456" y="108" width="36" height="28" rx="4"/>
-    <rect x="504" y="108" width="36" height="28" rx="4"/>
-    <rect x="552" y="108" width="36" height="28" rx="4"/>
-    <rect x="360" y="152" width="36" height="28" rx="4"/>
-    <rect x="408" y="152" width="36" height="28" rx="4"/>
-    <rect x="456" y="152" width="36" height="28" rx="4"/>
-    <rect x="504" y="152" width="36" height="28" rx="4"/>
-    <rect x="552" y="152" width="36" height="28" rx="4"/>
-    <rect x="360" y="196" width="36" height="28" rx="4"/>
-    <rect x="408" y="196" width="36" height="28" rx="4"/>
-    <rect x="456" y="196" width="36" height="28" rx="4"/>
-  </g>
-  <g stroke="#C6A15A" stroke-width="3" stroke-linecap="round">
-    <line x1="366" y1="86" x2="390" y2="70"/>
-    <line x1="414" y1="86" x2="438" y2="70"/>
-    <line x1="462" y1="86" x2="486" y2="70"/>
-    <line x1="510" y1="86" x2="534" y2="70"/>
-    <line x1="558" y1="86" x2="582" y2="70"/>
-    <line x1="366" y1="130" x2="390" y2="114"/>
-    <line x1="414" y1="130" x2="438" y2="114"/>
-    <line x1="462" y1="130" x2="486" y2="114"/>
-    <line x1="510" y1="130" x2="534" y2="114"/>
-    <line x1="558" y1="130" x2="582" y2="114"/>
-    <line x1="366" y1="174" x2="390" y2="158"/>
-    <line x1="414" y1="174" x2="438" y2="158"/>
-    <line x1="462" y1="174" x2="486" y2="158"/>
-    <line x1="510" y1="174" x2="534" y2="158"/>
-    <line x1="558" y1="174" x2="582" y2="158"/>
-    <line x1="366" y1="218" x2="390" y2="202"/>
-    <line x1="414" y1="218" x2="438" y2="202"/>
-    <line x1="462" y1="218" x2="486" y2="202"/>
-  </g>
+  <text x="48" y="72" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">KUBERNETES</text>
+  <text x="48" y="168" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="84">1.37</text>
+  <text x="48" y="230" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="28">18 options à enlever</text>
+  <text x="48" y="278" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="28">sinon ça ne démarre pas</text>
 </svg>

@@ -18,7 +18,7 @@
       <ol v-else class="blog-list">
         <li v-for="article in articles" :key="article.slug">
           <router-link :to="`/${locale}/blog/${article.slug}`">
-            <img v-if="article.cover" class="blog-cover" :src="`${article.cover}?v=2`" alt="" />
+            <img v-if="article.cover" class="blog-cover" :src="`${article.cover}?v=4`" alt="" />
             <span class="blog-kicker">{{ t(`blog.categories.${article.category}`) }}</span>
             <time v-if="article.date" :datetime="article.date">{{ formatDate(article.date) }}</time>
             <h2>{{ article.title }}</h2>

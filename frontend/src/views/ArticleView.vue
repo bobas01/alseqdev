@@ -7,7 +7,7 @@
         <p class="blog-kicker">{{ t(`blog.categories.${article.category}`) }}</p>
         <time v-if="article.date" :datetime="article.date">{{ formatDate(article.date) }}</time>
         <h1>{{ article.title }}</h1>
-        <img v-if="article.cover" class="article-cover" :src="`${article.cover}?v=2`" alt="" />
+        <img v-if="article.cover" class="article-cover" :src="`${article.cover}?v=4`" alt="" />
         <p v-if="article.summary" class="article-summary">{{ article.summary }}</p>
         <template v-for="(block, index) in blocks" :key="index">
           <h2 v-if="block.type === 'heading'">{{ block.text }}</h2>

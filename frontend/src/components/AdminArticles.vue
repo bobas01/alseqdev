@@ -10,7 +10,7 @@
         <button type="button" class="article-back" @click="reading = null">Retour à la liste</button>
         <p class="blog-kicker">{{ labels[reading.category] }} · {{ reading.locale }} · {{ reading.status === "published" ? "Publié" : "Brouillon" }}</p>
         <h2>{{ reading.title }}</h2>
-        <img v-if="reading.cover" class="admin-cover" :src="`${reading.cover}?v=2`" alt="" />
+        <img v-if="reading.cover" class="admin-cover" :src="`${reading.cover}?v=4`" alt="" />
         <p v-if="reading.summary">{{ reading.summary }}</p>
         <template v-for="(block, index) in blocks" :key="index">
           <h3 v-if="block.type === 'heading'">{{ block.text }}</h3>
@@ -81,7 +81,7 @@
         Visuel
         <input v-model="form.cover" placeholder="/blog/nom.svg" />
       </label>
-      <img v-if="form.cover" class="admin-cover" :src="`${form.cover}?v=2`" alt="" />
+      <img v-if="form.cover" class="admin-cover" :src="`${form.cover}?v=4`" alt="" />
       <label>
         Texte
         <textarea v-model="form.body" required rows="16" />
