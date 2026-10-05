@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Blog\ArticlePresenter;
 use App\Blog\CoverFiles;
 use App\Entity\Article;
 use App\Repository\ArticleRepository;
@@ -14,7 +15,7 @@ use Symfony\Component\Routing\Attribute\Route;
 final class BlogController extends AbstractController
 {
     #[Route('/api/blog', name: 'blog_list', methods: ['GET'])]
-    public function list(Request $request, ArticleRepository $articles): JsonResponse
+    public function list(Request $request, ArticleRepository $articles, ArticlePresenter $presenter): JsonResponse
     {
         $locale = (string) $request->query->get('locale', '');
         if (!in_array($locale, Article::LOCALES, true)) {
@@ -28,7 +29,7 @@ final class BlogController extends AbstractController
         }
 
         return $this->json(
-            array_map(fn (Article $article) => $this->card($article), $articles->published($locale, $category)),
+            array_map(fn (Article $article) => $presenter->card($article), $articles->published($locale, $category)),
             headers: ['Cache-Control' => 'no-store'],
         );
     }
@@ -50,7 +51,7 @@ final class BlogController extends AbstractController
     }
 
     #[Route('/api/blog/{locale}/{slug}', name: 'blog_article', methods: ['GET'], requirements: ['locale' => 'pt-br|fr|en|es', 'slug' => '[a-z0-9-]+'])]
-    public function article(string $locale, string $slug, ArticleRepository $articles): JsonResponse
+    public function article(string $locale, string $slug, ArticleRepository $articles, ArticlePresenter $presenter): JsonResponse
     {
         $article = $articles->findPublished($locale, $slug);
         if ($article === null) {
@@ -65,26 +66,10 @@ final class BlogController extends AbstractController
         }
 
         return $this->json([
-            ...$this->card($article),
+            ...$presenter->card($article),
             'body' => $article->getBody(),
             'sources' => $article->getSources(),
             'translations' => $translations,
         ], headers: ['Cache-Control' => 'no-store']);
-    }
-
-    /** @return array<string, mixed> */
-    private function card(Article $article): array
-    {
-        $date = $article->getPublishedAt() ?? $article->getCreatedAt();
-
-        return [
-            'slug' => $article->getSlug(),
-            'locale' => $article->getLocale(),
-            'category' => $article->getCategory(),
-            'title' => $article->getTitle(),
-            'summary' => $article->getSummary(),
-            'cover' => $article->getCover(),
-            'date' => $date->format('Y-m-d'),
-        ];
     }
 }

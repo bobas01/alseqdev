@@ -5,25 +5,12 @@
       <p v-if="missing" class="blog-empty">{{ t("blog.missing") }}</p>
       <template v-else-if="article">
         <p class="blog-kicker">{{ t(`blog.categories.${article.category}`) }}</p>
-        <time v-if="article.date" :datetime="article.date">{{ formatDate(article.date) }}</time>
+        <time v-if="article.date" :datetime="article.date">{{ formatDate(article.date, locale) }}</time>
         <h1>{{ article.title }}</h1>
-        <img v-if="article.cover" class="article-cover" :src="`${article.cover}?v=4`" alt="" />
+        <ArticleCover :src="article.cover" />
         <p v-if="article.summary" class="article-summary">{{ article.summary }}</p>
-        <template v-for="(block, index) in blocks" :key="index">
-          <h2 v-if="block.type === 'heading'">{{ block.text }}</h2>
-          <ul v-else-if="block.type === 'list'">
-            <li v-for="item in block.items" :key="item">{{ item }}</li>
-          </ul>
-          <p v-else>{{ block.text }}</p>
-        </template>
-        <section v-if="article.sources.length > 0" class="article-sources">
-          <h2>{{ t("blog.sources") }}</h2>
-          <ul>
-            <li v-for="source in article.sources" :key="source.url">
-              <a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}</a>
-            </li>
-          </ul>
-        </section>
+        <ArticleBody :blocks="blocks" />
+        <ArticleSources :sources="article.sources" :title="t('blog.sources')" />
       </template>
     </div>
   </section>
@@ -34,7 +21,10 @@ import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 import { blogNav, parseBlocks } from "../blog";
-import { htmlLanguage } from "../i18n";
+import ArticleBody from "../components/ArticleBody.vue";
+import ArticleCover from "../components/ArticleCover.vue";
+import ArticleSources from "../components/ArticleSources.vue";
+import { formatDate } from "../formatDate";
 
 const { t } = useI18n();
 const route = useRoute();
@@ -66,15 +56,4 @@ async function load() {
   }
 }
 
-function formatDate(value) {
-  const date = new Date(`${value}T12:00:00`);
-  if (Number.isNaN(date.getTime())) {
-    return value;
-  }
-  return new Intl.DateTimeFormat(htmlLanguage(locale.value), {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(date);
-}
 </script>

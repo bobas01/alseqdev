@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Contact\ContactChallenge;
 use App\Contact\ContactSubmission;
+use App\Contact\ContactText;
 use App\Entity\ContactMessage;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,9 +24,6 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 final class ContactController extends AbstractController
 {
     private const TOKEN_ID = 'submit_contact';
-    private const MIN_DELAY_MS = 3000;
-    private const MAX_AGE_MS = 43_200_000;
-    private const CLOCK_SKEW_MS = 60_000;
     private const MAX_BODY_BYTES = 12_000;
 
     public function __construct(
@@ -43,10 +42,13 @@ final class ContactController extends AbstractController
     }
 
     #[Route('/api/contact/token', name: 'contact_token', methods: ['GET'])]
-    public function token(): JsonResponse
+    public function token(ContactChallenge $challenge): JsonResponse
     {
         return $this->json(
-            ['token' => $this->csrfTokenManager->getToken(self::TOKEN_ID)->getValue()],
+            [
+                'token' => $this->csrfTokenManager->getToken(self::TOKEN_ID)->getValue(),
+                ...$challenge->issue($this->secret),
+            ],
             headers: ['Cache-Control' => 'no-store'],
         );
     }
@@ -58,7 +60,7 @@ final class ContactController extends AbstractController
     }
 
     #[Route('/api/contact', name: 'contact_submit', methods: ['POST'])]
-    public function submit(Request $request): JsonResponse
+    public function submit(Request $request, ContactChallenge $challenge): JsonResponse
     {
         $limiter = $this->contactFormLimiter->create($request->getClientIp() ?? 'unknown');
         if (!$limiter->consume()->isAccepted()) {
@@ -95,27 +97,15 @@ final class ContactController extends AbstractController
             return $this->ok();
         }
 
-        $startedAt = $payload['startedAt'] ?? null;
-        if (is_float($startedAt) && floor($startedAt) === $startedAt) {
-            $startedAt = (int) $startedAt;
-        }
-        if (!is_int($startedAt)) {
-            return $this->fail('invalid', Response::HTTP_UNPROCESSABLE_ENTITY);
-        }
-
-        $now = (int) floor(microtime(true) * 1000);
-        $elapsed = $now - $startedAt;
-        if ($startedAt > $now + self::CLOCK_SKEW_MS || $elapsed > self::MAX_AGE_MS) {
-            return $this->fail('invalid', Response::HTTP_UNPROCESSABLE_ENTITY);
-        }
-        if ($elapsed < self::MIN_DELAY_MS) {
-            return $this->fail('soon', Response::HTTP_UNPROCESSABLE_ENTITY);
+        $started = $challenge->problem($this->secret, $payload['issued'] ?? null, $payload['proof'] ?? null);
+        if ($started !== null) {
+            return $this->fail($started, Response::HTTP_UNPROCESSABLE_ENTITY);
         }
 
         $submission = new ContactSubmission(
-            $this->cleanLine($payload['name'] ?? ''),
-            $this->cleanLine($payload['email'] ?? ''),
-            $this->cleanText($payload['message'] ?? ''),
+            ContactText::line($payload['name'] ?? ''),
+            ContactText::line($payload['email'] ?? ''),
+            ContactText::block($payload['message'] ?? ''),
             is_string($payload['locale'] ?? null) ? $payload['locale'] : '',
         );
 
@@ -158,29 +148,6 @@ final class ContactController extends AbstractController
             ->replyTo(new Address($submission->email, $submission->name))
             ->subject('ALSEQ DEV — nouveau message')
             ->text($body);
-    }
-
-    private function cleanLine(mixed $value): string
-    {
-        if (!is_string($value)) {
-            return '';
-        }
-
-        $value = trim(strip_tags($value));
-
-        return preg_replace('/\s+/u', ' ', $value) ?? '';
-    }
-
-    private function cleanText(mixed $value): string
-    {
-        if (!is_string($value)) {
-            return '';
-        }
-
-        $value = strip_tags(str_replace(["\r\n", "\r"], "\n", $value));
-        $value = preg_replace("/[\\x00-\\x08\\x0B\\x0C\\x0E-\\x1F\\x7F]/", '', $value) ?? '';
-
-        return trim($value);
     }
 
     private function ok(): JsonResponse

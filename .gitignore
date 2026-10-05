@@ -56,5 +56,6 @@
 /backend/var/
 /backend/.env.local
 /backend/.env.*.local
+/backend/.phpunit.cache/
 /frontend/node_modules/
 /frontend/dist/

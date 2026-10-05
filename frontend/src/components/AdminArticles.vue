@@ -10,23 +10,10 @@
         <button type="button" class="article-back" @click="reading = null">Retour à la liste</button>
         <p class="blog-kicker">{{ labels[reading.category] }} · {{ reading.locale }} · {{ reading.status === "published" ? "Publié" : "Brouillon" }}</p>
         <h2>{{ reading.title }}</h2>
-        <img v-if="reading.cover" class="admin-cover" :src="`${reading.cover}?v=4`" alt="" />
+        <ArticleCover :src="reading.cover" kind="admin" />
         <p v-if="reading.summary">{{ reading.summary }}</p>
-        <template v-for="(block, index) in blocks" :key="index">
-          <h3 v-if="block.type === 'heading'">{{ block.text }}</h3>
-          <ul v-else-if="block.type === 'list'">
-            <li v-for="item in block.items" :key="item">{{ item }}</li>
-          </ul>
-          <p v-else>{{ block.text }}</p>
-        </template>
-        <section v-if="reading.sources.length > 0">
-          <h3>Sources</h3>
-          <ul>
-            <li v-for="source in reading.sources" :key="source.url">
-              <a :href="source.url" target="_blank" rel="noopener noreferrer">{{ source.title }}</a>
-            </li>
-          </ul>
-        </section>
+        <ArticleBody :blocks="blocks" heading="h3" />
+        <ArticleSources :sources="reading.sources" title="Sources" heading="h3" />
         <div class="admin-actions">
           <SiteButton type="button" @click="edit(reading.id)">Modifier</SiteButton>
           <SiteButton type="button" @click="setPublished(reading.status !== 'published')">
@@ -81,7 +68,7 @@
         Visuel
         <input v-model="form.cover" placeholder="/blog/nom.svg" />
       </label>
-      <img v-if="form.cover" class="admin-cover" :src="`${form.cover}?v=4`" alt="" />
+      <ArticleCover :src="form.cover" kind="admin" />
       <label>
         Texte
         <textarea v-model="form.body" required rows="16" />
@@ -117,6 +104,9 @@
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import { BLOG_CATEGORIES, parseBlocks } from "../blog";
+import ArticleBody from "./ArticleBody.vue";
+import ArticleCover from "./ArticleCover.vue";
+import ArticleSources from "./ArticleSources.vue";
 import SiteButton from "./SiteButton.vue";
 
 const categories = BLOG_CATEGORIES;

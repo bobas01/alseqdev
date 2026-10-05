@@ -1,10 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { htmlLanguage, i18n, LOCALES } from "./i18n";
-import AdminView from "./views/AdminView.vue";
-import ArticleView from "./views/ArticleView.vue";
-import BlogView from "./views/BlogView.vue";
 import HomeView from "./views/HomeView.vue";
-import LegalView from "./views/LegalView.vue";
 
 const localePattern = LOCALES.join("|");
 
@@ -18,17 +14,17 @@ export const router = createRouter({
   },
   routes: [
     { path: "/", redirect: "/pt-br" },
-    { path: "/admin", name: "admin", component: AdminView },
+    { path: "/admin", name: "admin", component: () => import("./views/AdminView.vue") },
     {
       path: `/:locale(${localePattern})/confidentialite`,
       name: "privacy",
-      component: LegalView,
+      component: () => import("./views/LegalView.vue"),
       meta: { page: "privacy" },
     },
     {
       path: `/:locale(${localePattern})/mentions`,
       name: "notice",
-      component: LegalView,
+      component: () => import("./views/LegalView.vue"),
       meta: { page: "notice" },
     },
     {
@@ -42,12 +38,12 @@ export const router = createRouter({
     {
       path: `/:locale(${localePattern})/blog/:slug`,
       name: "article",
-      component: ArticleView,
+      component: () => import("./views/ArticleView.vue"),
     },
     {
       path: `/:locale(${localePattern})/blog`,
       name: "blog",
-      component: BlogView,
+      component: () => import("./views/BlogView.vue"),
       meta: { page: "blog" },
     },
     {

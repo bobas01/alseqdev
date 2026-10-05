@@ -30,7 +30,7 @@
             <button type="button" @click="openMessage(item.id)">
               <strong>{{ item.name }}</strong>
               <span>{{ item.email }}</span>
-              <span>{{ formatDate(item.createdAt) }}</span>
+              <span>{{ formatDateTime(item.createdAt) }}</span>
               <span>{{ item.excerpt }}</span>
             </button>
           </li>
@@ -38,7 +38,7 @@
         <article v-if="current" class="admin-message">
           <h2>{{ current.name }}</h2>
           <p>{{ current.email }}</p>
-          <p>{{ formatDate(current.createdAt) }} · {{ current.locale }}</p>
+          <p>{{ formatDateTime(current.createdAt) }} · {{ current.locale }}</p>
           <p class="admin-body">{{ current.message }}</p>
           <SiteButton type="button" @click="removeMessage(current.id)">Supprimer</SiteButton>
         </article>
@@ -53,6 +53,7 @@
 import { onMounted, ref, watch } from "vue";
 import AdminArticles from "../components/AdminArticles.vue";
 import SiteButton from "../components/SiteButton.vue";
+import { formatDateTime } from "../formatDate";
 
 const email = ref("alseqdev@gmail.com");
 const password = ref("");
@@ -145,10 +146,4 @@ async function logout() {
   current.value = null;
 }
 
-function formatDate(value) {
-  return new Intl.DateTimeFormat("fr-FR", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(new Date(value));
-}
 </script>

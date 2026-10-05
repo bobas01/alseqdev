@@ -18,9 +18,9 @@
       <ol v-else class="blog-list">
         <li v-for="article in articles" :key="article.slug">
           <router-link :to="`/${locale}/blog/${article.slug}`">
-            <img v-if="article.cover" class="blog-cover" :src="`${article.cover}?v=4`" alt="" />
+            <ArticleCover :src="article.cover" kind="blog" />
             <span class="blog-kicker">{{ t(`blog.categories.${article.category}`) }}</span>
-            <time v-if="article.date" :datetime="article.date">{{ formatDate(article.date) }}</time>
+            <time v-if="article.date" :datetime="article.date">{{ formatDate(article.date, locale) }}</time>
             <h2>{{ article.title }}</h2>
             <p v-if="article.summary">{{ article.summary }}</p>
           </router-link>
@@ -35,7 +35,8 @@ import { computed, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import { BLOG_CATEGORIES, blogNav } from "../blog";
-import { htmlLanguage } from "../i18n";
+import ArticleCover from "../components/ArticleCover.vue";
+import { formatDate } from "../formatDate";
 
 const { t } = useI18n();
 const route = useRoute();
@@ -70,17 +71,5 @@ async function load() {
   } catch {
     articles.value = [];
   }
-}
-
-function formatDate(value) {
-  const date = new Date(`${value}T12:00:00`);
-  if (Number.isNaN(date.getTime())) {
-    return value;
-  }
-  return new Intl.DateTimeFormat(htmlLanguage(locale.value), {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(date);
 }
 </script>

@@ -9,12 +9,13 @@ final class CoverFiles
     public function __construct(
         #[Autowire('%kernel.project_dir%')]
         private string $projectDir,
+        private SvgCover $svg,
     ) {
     }
 
     public function store(string $name, string $svg): bool
     {
-        if (preg_match('/^[a-z0-9-]+$/', $name) !== 1 || !$this->acceptable($svg)) {
+        if (preg_match('/^[a-z0-9-]+$/', $name) !== 1 || !$this->svg->accepts($svg)) {
             return false;
         }
 
@@ -42,8 +43,11 @@ final class CoverFiles
             $path = $directory.'/'.$name.'.svg';
             if (is_file($path)) {
                 $contents = file_get_contents($path);
+                if (!is_string($contents) || !$this->svg->accepts($contents)) {
+                    return null;
+                }
 
-                return is_string($contents) ? $contents : null;
+                return $contents;
             }
         }
 
@@ -55,15 +59,5 @@ final class CoverFiles
         return is_dir('/data') && is_writable('/data')
             ? '/data/blog-covers'
             : $this->projectDir.'/var/blog-covers';
-    }
-
-    private function acceptable(string $svg): bool
-    {
-        $svg = trim($svg);
-        if ($svg === '' || strlen($svg) > 20000 || !str_starts_with($svg, '<svg') || !str_ends_with($svg, '</svg>')) {
-            return false;
-        }
-
-        return preg_match('/<script|<\/script|on[a-z]+\s*=|javascript:|foreignObject|<iframe|<embed|<object|<link|<meta|<!ENTITY/i', $svg) !== 1;
     }
 }
