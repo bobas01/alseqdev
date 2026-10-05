@@ -1,7 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Choix">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
   <rect width="640" height="360" fill="#1B3A5F"/>
-  <circle cx="150" cy="180" r="54" fill="none" stroke="#C6A15A" stroke-width="8"/>
-  <circle cx="310" cy="180" r="54" fill="#C6A15A"/>
-  <text x="390" y="172" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="42">un choix</text>
-  <text x="390" y="214" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">pas un texte</text>
+  <line x1="320" y1="36" x2="320" y2="324" stroke="#C6A15A" stroke-width="2"/>
+  <text x="48" y="64" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="1">CLOUDFLARE</text>
+  <text x="360" y="64" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="1">AWS</text>
+  <g fill="#F4F1EA">
+    <rect x="48" y="96" width="200" height="8" rx="2"/>
+    <rect x="48" y="116" width="168" height="8" rx="2"/>
+    <rect x="48" y="136" width="184" height="8" rx="2"/>
+    <rect x="48" y="156" width="140" height="8" rx="2"/>
+    <rect x="360" y="96" width="200" height="8" rx="2"/>
+    <rect x="360" y="116" width="168" height="8" rx="2"/>
+    <rect x="360" y="136" width="184" height="8" rx="2"/>
+    <rect x="360" y="156" width="140" height="8" rx="2"/>
+  </g>
+  <g stroke="#C6A15A" stroke-width="4" stroke-linecap="round">
+    <line x1="56" y1="168" x2="240" y2="92"/>
+    <line x1="368" y1="168" x2="552" y2="92"/>
+  </g>
+  <g fill="none" stroke="#C6A15A" stroke-width="3">
+    <rect x="48" y="220" width="64" height="48" rx="10"/>
+    <rect x="200" y="220" width="64" height="48" rx="10"/>
+    <rect x="360" y="220" width="64" height="48" rx="10"/>
+    <rect x="512" y="220" width="64" height="48" rx="10"/>
+  </g>
+  <rect x="124" y="220" width="64" height="48" rx="10" fill="#C6A15A"/>
+  <rect x="436" y="220" width="64" height="48" rx="10" fill="#C6A15A"/>
 </svg>

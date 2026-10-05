@@ -1,7 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Correctif">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
   <rect width="640" height="360" fill="#1B3A5F"/>
-  <circle cx="168" cy="180" r="92" fill="none" stroke="#C6A15A" stroke-width="10"/>
-  <circle cx="168" cy="180" r="8" fill="#C6A15A"/>
-  <text x="292" y="176" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="48">Correctif</text>
-  <text x="292" y="214" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">4 octobre</text>
+  <text x="48" y="78" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">NETSCALER</text>
+  <text x="48" y="132" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="36">04.10.2026</text>
+  <text x="48" y="210" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="32">14.1</text>
+  <text x="48" y="278" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="32">13.1</text>
+  <g fill="none" stroke="#C6A15A" stroke-width="4" stroke-linecap="round">
+    <line x1="150" y1="200" x2="300" y2="200"/>
+    <path d="M284 188 l20 12 l-20 12"/>
+    <line x1="150" y1="268" x2="300" y2="268"/>
+    <path d="M284 256 l20 12 l-20 12"/>
+  </g>
+  <text x="330" y="212" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="36">73.41</text>
+  <text x="330" y="280" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="36">64.28</text>
 </svg>

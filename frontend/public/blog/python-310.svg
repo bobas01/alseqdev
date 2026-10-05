@@ -1,7 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Python 3.10">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
   <rect width="640" height="360" fill="#1B3A5F"/>
-  <rect x="0" y="0" width="18" height="360" fill="#C6A15A"/>
-  <text x="56" y="168" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="92">3.10</text>
-  <rect x="56" y="196" width="148" height="4" fill="#C6A15A"/>
-  <text x="56" y="236" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">dernière mise à jour</text>
+  <text x="56" y="72" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">PYTHON</text>
+  <text x="52" y="188" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="92">3.10</text>
+  <line x1="56" y1="156" x2="292" y2="112" stroke="#C6A15A" stroke-width="6"/>
+  <text x="56" y="236" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">01.10.2026</text>
+  <g fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="26">
+    <text x="400" y="92">3.14</text>
+    <text x="400" y="144">3.13</text>
+    <text x="400" y="196">3.12</text>
+    <text x="400" y="248">3.11</text>
+    <text x="400" y="308" fill="#C6A15A">3.10</text>
+  </g>
+  <g fill="none" stroke="#C6A15A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M520 78 l8 8 l16 -18"/>
+    <path d="M520 130 l8 8 l16 -18"/>
+    <path d="M520 182 l8 8 l16 -18"/>
+    <path d="M520 234 l8 8 l16 -18"/>
+  </g>
+  <line x1="392" y1="300" x2="560" y2="300" stroke="#C6A15A" stroke-width="4"/>
 </svg>
