@@ -2,6 +2,7 @@
   <section class="band band-paper">
     <div class="wrap admin">
       <h1>{{ authenticated ? (section === "articles" ? "Articles" : "Messages") : "Messages" }}</h1>
+      <router-link class="admin-home" to="/">Retour au site</router-link>
       <form v-if="!authenticated" @submit.prevent="login">
         <label>
           E-mail
