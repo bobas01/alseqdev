@@ -47,7 +47,7 @@
         "points": [
           "Algumas páginas, fáceis de ler no celular",
           "Um jeito de receber mensagens",
-          "A reformulação de um site que já está no ar"
+          "A reforma de um site que já está no ar"
         ]
       },
       {
@@ -55,8 +55,8 @@
         "title": "Sistema sob medida",
         "points": [
           "Área do cliente, painel, reservas ou controle",
-          "No ritmo do seu trabalho",
-          "O orçamento nasce da necessidade, não de um número de páginas"
+          "Do jeito que você trabalha",
+          "O orçamento parte da necessidade, não do número de páginas"
         ]
       },
       {
@@ -85,7 +85,7 @@
     "items": [
       {
         "title": "Alinhamento",
-        "text": "Esclarecemos a necessidade, o público e o que precisa estar no ar primeiro."
+        "text": "Alinhamos a necessidade, para quem é, e o que precisa estar no ar primeiro."
       },
       {
         "title": "Proposta",
@@ -93,23 +93,23 @@
       },
       {
         "title": "Construção",
-        "text": "O trabalho avança em etapas visíveis. Você valida ao longo do caminho."
+        "text": "O trabalho avança em etapas visíveis. Você acompanha e aprova ao longo do caminho."
       },
       {
         "title": "Entrega",
-        "text": "Publicação, acessos, e o que vem depois se você quiser manutenção."
+        "text": "Publicação, entrega dos acessos, e o que vem depois se você quiser manutenção."
       }
     ]
   },
   "presence": {
     "title": "Presença",
     "place": "Niterói, Rio de Janeiro",
-    "zone": "Fuso de São Paulo",
-    "text": "As ligações são em francês, português e inglês. O site também pode ser lido em espanhol. De manhã, o horário encontra a costa leste dos Estados Unidos. À tarde, encontra a Europa."
+    "zone": "Horário de Brasília",
+    "text": "As ligações são em francês, português e inglês. O site também pode ser lido em espanhol. De manhã, o horário coincide com a costa leste dos Estados Unidos. À tarde, coincide com a Europa."
   },
   "contact": {
     "title": "Contato",
-    "intro": "Descreva o projeto. A mensagem segue por e-mail. O WhatsApp continua aberto se preferir escrever por lá.",
+    "intro": "Descreva o projeto. A mensagem vai por e-mail. O WhatsApp continua aberto se preferir escrever por lá.",
     "name": "Nome",
     "email": "E-mail",
     "message": "Mensagem",
@@ -120,7 +120,7 @@
     "invalid": "Confira o nome, o e-mail e a mensagem.",
     "soon": "Espere alguns segundos e envie de novo.",
     "rate": "Mensagens demais por agora. Tente mais tarde ou escreva no WhatsApp.",
-    "kept": "A mensagem fica guardada o tempo da resposta e depois é apagada.",
+    "kept": "A mensagem fica guardada até a resposta e depois é apagada.",
     "direct": "Ou escrever no WhatsApp",
     "float": "WhatsApp",
     "prefill": "Olá, quero falar de um projeto."
@@ -132,7 +132,7 @@
     "restart": "Recomeçar",
     "placeholder": "Escreva em uma frase",
     "continue": "Continuar",
-    "hello": "Olá. Ficamos no site. Algumas perguntas, e a mensagem para o WhatsApp fica pronta.",
+    "hello": "Olá. A gente continua aqui no site. Algumas perguntas, e a mensagem do WhatsApp fica pronta.",
     "askKind": "O que você quer colocar no ar?",
     "aside": "O site continua aberto. O WhatsApp abre ao lado, no navegador. Ele não pode aparecer dentro desta página.",
     "askSite": "É um site institucional novo, ou a reforma de um site que já está no ar?",
@@ -141,7 +141,7 @@
     "askExisting": "O que você quer fazer com ele?",
     "askAbout": "Em uma frase, do que se trata?",
     "askClients": "Em uma frase, o que os clientes devem poder fazer?",
-    "askBooking": "Em uma frase, o que se reserva?",
+    "askBooking": "Em uma frase, o que as pessoas reservam?",
     "askDaily": "Em uma frase, o que você quer acompanhar?",
     "askPayment": "Em uma frase, quem paga, e pelo quê?",
     "askNeed": "Descreva a necessidade em uma frase.",
@@ -163,7 +163,7 @@
       "clients": "Um espaço para os clientes",
       "booking": "Reservas",
       "daily": "Ver a atividade do dia a dia",
-      "payment": "Contas e um pagamento",
+      "payment": "Cadastro e pagamento",
       "tool": "Uma ferramenta que já existe",
       "other": "Outro"
     },
@@ -181,7 +181,7 @@
       "offer": "O que você oferece",
       "hours": "Horários e endereço",
       "photos": "Fotos",
-      "write": "Um meio de escrever para você",
+      "write": "Um jeito de escrever para você",
       "prices": "Os preços"
     },
     "shopOrder": {
@@ -214,8 +214,8 @@
       "pay": "Pagar"
     },
     "bookHow": {
-      "alone": "Ela escolhe um horário sozinha",
-      "confirm": "Ela pede, você confirma"
+      "alone": "A pessoa escolhe o horário sozinha",
+      "confirm": "A pessoa pede, você confirma"
     },
     "dailyWho": {
       "me": "Só você",
@@ -228,12 +228,12 @@
       "both": "Os dois"
     },
     "draft": {
-      "shop": "Olá. Quero uma loja online. Ela vende: {line}. Pedido: {order}. Recebimento: {receive}.",
+      "shop": "Olá. Quero uma loja online. Ela vende: {line}. Pedido: {order}. Como recebe: {receive}.",
       "other": "Olá. Outro pedido: {line}",
       "clients": "Olá. Quero um espaço para os clientes. Eles devem poder: {parts}. Atividade: {line}",
-      "booking": "Olá. Quero receber reservas. O que se reserva: {line}. A pessoa: {how}.",
+      "booking": "Olá. Quero receber reservas. As pessoas reservam: {line}. Como reserva: {how}.",
       "daily": "Olá. Quero ver a atividade do dia a dia. Para acompanhar: {line}. Quem vê: {who}.",
-      "payment": "Olá. Quero contas e um pagamento. Quem paga, e pelo quê: {line}. Ritmo: {rhythm}.",
+      "payment": "Olá. Quero cadastro e pagamento. Quem paga, e pelo quê: {line}. Quando: {rhythm}.",
       "site": {
         "new": "Olá. Quero um site institucional. Atividade: {line}. No site: {parts}.",
         "redesign": "Olá. Quero reformar um site institucional que já está no ar. Atividade: {line}. No site: {parts}."
@@ -258,8 +258,8 @@
   "privacy": {
     "title": "Privacidade",
     "paragraphs": [
-      "Alexandre Sequeira oferece seus serviços com o nome ALSEQ DEV, a partir de Niterói, Rio de Janeiro, Brasil. Para uma pergunta sobre esses dados: alseqdev@gmail.com.",
-      "O formulário pede o nome, o e-mail e a mensagem. O site também guarda o idioma da página, a data do envio e uma impressão do endereço IP. O endereço IP em si não fica guardado.",
+      "Alexandre Sequeira oferece seus serviços com o nome ALSEQ DEV, em Niterói, Rio de Janeiro, Brasil. Para uma pergunta sobre esses dados: alseqdev@gmail.com.",
+      "O formulário pede o nome, o e-mail e a mensagem. O site também guarda o idioma da página, a data do envio e um código calculado a partir do endereço IP. O endereço IP em si não fica guardado.",
       "Essas informações servem para ler o pedido e responder. Elas não são vendidas e não servem para publicidade. O site não mede a audiência.",
       "A mensagem fica guardada por um ano e depois é apagada. Antes disso, um pedido enviado a alseqdev@gmail.com permite lê-la, corrigi-la ou apagá-la.",
       "Um cookie técnico protege o formulário. Ele não acompanha a navegação. Não há cookie de publicidade.",
@@ -270,10 +270,10 @@
   "notice": {
     "title": "Informações legais",
     "paragraphs": [
-      "ALSEQ DEV é o nome usado por Alexandre Sequeira para o desenvolvimento web à distância, a partir de Niterói, Rio de Janeiro, Brasil.",
+      "ALSEQ DEV é o nome usado por Alexandre Sequeira para o desenvolvimento web à distância, em Niterói, Rio de Janeiro, Brasil.",
       "Contato: alseqdev@gmail.com e WhatsApp +55 62 99152-5466.",
       "O site descreve os serviços. Os preços são passados em um orçamento, depois de uma conversa.",
-      "Os textos e o logo pertencem a Alexandre Sequeira."
+      "Os textos e o logotipo pertencem a Alexandre Sequeira."
     ]
   }
 }

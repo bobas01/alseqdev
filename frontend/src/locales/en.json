@@ -121,7 +121,7 @@
     "soon": "Wait a few seconds, then send again.",
     "rate": "Too many messages for now. Try later, or write on WhatsApp.",
     "kept": "The message is kept long enough to reply, then deleted.",
-    "direct": "Or write on WhatsApp",
+    "direct": "Or message on WhatsApp",
     "float": "WhatsApp",
     "prefill": "Hello, I would like to talk about a project."
   },
@@ -135,7 +135,7 @@
     "hello": "Hello. Let’s stay on the site. A few questions, and the WhatsApp message is ready.",
     "askKind": "What do you want to set up?",
     "aside": "The site stays open. WhatsApp opens beside it, in the browser. It cannot be shown inside this page.",
-    "askSite": "Is it a new showcase website, or a redesign of one already online?",
+    "askSite": "Is it a new company website, or a redesign of one already online?",
     "askActivity": "In one sentence, what activity should it present?",
     "askShop": "In one sentence, what does the shop sell?",
     "askExisting": "What do you want to do with it?",
@@ -157,18 +157,18 @@
     "donePicks": "That’s all",
     "draftLead": "Here is the message. You can send it as it is.",
     "kind": {
-      "site": "A showcase website",
+      "site": "A company website",
       "shop": "An online shop",
       "existing": "A website already online",
       "clients": "A place for your clients",
       "booking": "Bookings",
       "daily": "See the day-to-day activity",
-      "payment": "Accounts and a payment",
+      "payment": "Accounts and payment",
       "tool": "A tool already in place",
       "other": "Something else"
     },
     "siteMode": {
-      "new": "A new showcase website",
+      "new": "A new company website",
       "redesign": "A redesign"
     },
     "existingWork": {
@@ -181,13 +181,13 @@
       "offer": "What you offer",
       "hours": "Hours and address",
       "photos": "Photos",
-      "write": "A way to write to you",
+      "write": "A way to message you",
       "prices": "Prices"
     },
     "shopOrder": {
       "pay": "Pay on the website",
       "later": "Order now, pay later",
-      "write": "Write in order to buy"
+      "write": "Message to place an order"
     },
     "shopReceive": {
       "delivery": "Delivery",
@@ -228,15 +228,15 @@
       "both": "Both"
     },
     "draft": {
-      "shop": "Hello. I want an online shop. It sells: {line}. Order: {order}. Receiving: {receive}.",
+      "shop": "Hello. I want an online shop. It sells: {line}. Order: {order}. Delivery: {receive}.",
       "other": "Hello. Other request: {line}",
       "clients": "Hello. I want a place for clients. They should be able to: {parts}. Activity: {line}",
       "booking": "Hello. I want to take bookings. What is booked: {line}. The person: {how}.",
-      "daily": "Hello. I want to see the day-to-day activity. To follow: {line}. Who looks: {who}.",
-      "payment": "Hello. I want accounts and a payment. Who pays, and for what: {line}. Rhythm: {rhythm}.",
+      "daily": "Hello. I want to see the day-to-day activity. To follow: {line}. Who sees it: {who}.",
+      "payment": "Hello. I want accounts and payment. Who pays, and for what: {line}. Billing: {rhythm}.",
       "site": {
-        "new": "Hello. I want a showcase website. Activity: {line}. On the website: {parts}.",
-        "redesign": "Hello. I want a redesign of a showcase website already online. Activity: {line}. On the website: {parts}."
+        "new": "Hello. I want a company website. Activity: {line}. On the website: {parts}.",
+        "redesign": "Hello. I want a redesign of a company website already online. Activity: {line}. On the website: {parts}."
       },
       "existing": {
         "redo": "Hello. I want to rebuild a website already online. {line}. First: {parts}.",

@@ -32,7 +32,7 @@ El mismo anuncio publicó otros cuatro números: 3.11.17, 3.12.15, 3.13.16 y 3.1
 
 3.10.22 se entrega solo como código fuente. No hay instalador de Windows ni de macOS para este último número. Quien busque un archivo listo de 3.10.22 no lo encuentra: no se construyó.
 
-Eso no cambia el fondo. Incluso con un instalador, esta versión no recibiría más correcciones.
+Eso no cambia lo esencial. Incluso con un instalador, esta versión no recibiría más correcciones.
 
 ## Qué significa «sin corrección»
 
@@ -44,7 +44,7 @@ Las bibliotecas también acaban por exigir una versión más reciente. El moment
 
 No hay un número mágico. Hay una rama que todavía recibe correcciones, probada con el proyecto. Las bibliotecas, el alojamiento y las herramientas de alrededor tienen que seguir. Un entorno aparte por proyecto evita romper el resto de la máquina al cambiar la versión general.
 
-El gesto útil es ver dónde sigue en marcha 3.10 y elegir la rama que la sustituye. Esperar el próximo aviso de seguridad sobre 3.10 no sirve. No habrá otro.
+Lo útil es ver dónde sigue en marcha 3.10 y elegir la rama que la sustituye. Esperar el próximo aviso de seguridad sobre 3.10 no sirve. No habrá otro.
 TXT,
     ],
     [
@@ -121,7 +121,7 @@ Las ediciones FIPS y NDcPP tienen sus propios números en el boletín oficial. U
 
 A finales de septiembre ya se habían publicado otras correcciones de urgencia para los mismos aparatos. Citrix advierte de que las instalaciones actualizadas entonces necesitan otra actualización cuando entran en el boletín del 4 de octubre. La corrección de septiembre no cubre la del domingo.
 
-Para un acceso remoto de empresa, el gesto es aplicar el boletín del fabricante y controlar que el número de versión sea el que corrige. El plazo del catálogo estadounidense recuerda la prisa. No sustituye la página de Citrix.
+Para un acceso remoto de empresa, el paso es aplicar el boletín del fabricante y comprobar que el número de versión sea el que corrige. El plazo del catálogo estadounidense recuerda la prisa. No sustituye la página de Citrix.
 TXT,
     ],
     [

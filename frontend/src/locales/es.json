@@ -93,7 +93,7 @@
       },
       {
         "title": "Realización",
-        "text": "El trabajo avanza por etapas visibles. Usted lo valida sobre la marcha."
+        "text": "El trabajo avanza por etapas visibles. Usted lo revisa sobre la marcha."
       },
       {
         "title": "Entrega",
@@ -104,7 +104,7 @@
   "presence": {
     "title": "Presencia",
     "place": "Niterói, Rio de Janeiro",
-    "zone": "Huso horario de São Paulo",
+    "zone": "Hora de Brasilia",
     "text": "Las llamadas son en francés, portugués e inglés. El sitio también se lee en español. Por la mañana coincide con la costa este de Estados Unidos. Por la tarde coincide con Europa."
   },
   "contact": {
@@ -120,7 +120,7 @@
     "invalid": "Revise el nombre, el correo y el mensaje.",
     "soon": "Espere unos segundos y envíe de nuevo.",
     "rate": "Demasiados mensajes por ahora. Inténtelo más tarde o escriba por WhatsApp.",
-    "kept": "El mensaje se conserva el tiempo de la respuesta y después se borra.",
+    "kept": "El mensaje se guarda hasta la respuesta y después se borra.",
     "direct": "O escribir por WhatsApp",
     "float": "WhatsApp",
     "prefill": "Hola, quiero hablar de un proyecto."
@@ -132,10 +132,10 @@
     "restart": "Empezar de nuevo",
     "placeholder": "Escríbalo en una frase",
     "continue": "Continuar",
-    "hello": "Hola. Nos quedamos en el sitio. Unas preguntas, y el mensaje para WhatsApp queda listo.",
+    "hello": "Hola. Seguimos en el sitio. Unas preguntas, y el mensaje para WhatsApp queda listo.",
     "askKind": "¿Qué quiere poner en marcha?",
     "aside": "El sitio sigue abierto. WhatsApp se abre al lado, en el navegador. No puede mostrarse dentro de esta página.",
-    "askSite": "¿Es un sitio corporativo nuevo, o la renovación de uno que ya está en línea?",
+    "askSite": "¿Es un sitio corporativo nuevo, o el rediseño de uno que ya está en línea?",
     "askActivity": "En una frase, ¿qué actividad debe presentar?",
     "askShop": "En una frase, ¿qué vende la tienda?",
     "askExisting": "¿Qué quiere hacer con él?",
@@ -169,7 +169,7 @@
     },
     "siteMode": {
       "new": "Un sitio corporativo nuevo",
-      "redesign": "Una renovación"
+      "redesign": "Un rediseño"
     },
     "existingWork": {
       "redo": "Rehacerlo",
@@ -187,7 +187,7 @@
     "shopOrder": {
       "pay": "Se paga en el sitio",
       "later": "Se pide ahora y se paga después",
-      "write": "Se escribe para pedir"
+      "write": "Escribe para hacer el pedido"
     },
     "shopReceive": {
       "delivery": "Entrega",
@@ -214,7 +214,7 @@
       "pay": "Pagar"
     },
     "bookHow": {
-      "alone": "Elige una hora sola",
+      "alone": "Elige la hora por su cuenta",
       "confirm": "Pide, y usted confirma"
     },
     "dailyWho": {
@@ -228,15 +228,15 @@
       "both": "Los dos"
     },
     "draft": {
-      "shop": "Hola. Quiero una tienda en línea. Vende: {line}. Pedido: {order}. Recepción: {receive}.",
+      "shop": "Hola. Quiero una tienda en línea. Vende: {line}. Pedido: {order}. Entrega: {receive}.",
       "other": "Hola. Otra solicitud: {line}",
       "clients": "Hola. Quiero un espacio para los clientes. Deben poder: {parts}. Actividad: {line}",
       "booking": "Hola. Quiero recibir reservas. Se reserva: {line}. La persona: {how}.",
-      "daily": "Hola. Quiero ver la actividad del día a día. Para seguir: {line}. Quién mira: {who}.",
-      "payment": "Hola. Quiero cuentas y un pago. Quién paga, y a cambio de qué: {line}. Ritmo: {rhythm}.",
+      "daily": "Hola. Quiero ver la actividad del día a día. Para seguir: {line}. Quién lo ve: {who}.",
+      "payment": "Hola. Quiero cuentas y un pago. Quién paga, y a cambio de qué: {line}. Cuándo: {rhythm}.",
       "site": {
         "new": "Hola. Quiero un sitio corporativo. Actividad: {line}. En el sitio: {parts}.",
-        "redesign": "Hola. Quiero renovar un sitio corporativo que ya está en línea. Actividad: {line}. En el sitio: {parts}."
+        "redesign": "Hola. Quiero rediseñar un sitio corporativo que ya está en línea. Actividad: {line}. En el sitio: {parts}."
       },
       "existing": {
         "redo": "Hola. Quiero rehacer un sitio que ya está en línea. {line}. Primero: {parts}.",
@@ -273,7 +273,7 @@
       "ALSEQ DEV es el nombre que usa Alexandre Sequeira para el desarrollo web a distancia, desde Niterói, Río de Janeiro, Brasil.",
       "Contacto: alseqdev@gmail.com y WhatsApp +55 62 99152-5466.",
       "El sitio describe los servicios. Los precios se dan en un presupuesto, después de una conversación.",
-      "Los textos y el logo pertenecen a Alexandre Sequeira."
+      "Los textos y el logotipo pertenecen a Alexandre Sequeira."
     ]
   }
 }
