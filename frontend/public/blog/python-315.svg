@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <text x="56" y="78" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">PYTHON</text>
+  <text x="52" y="196" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="108">3.15</text>
+  <text x="56" y="258" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">09.10.2026</text>
+  <g fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="26">
+    <text x="430" y="118">UTF-8</text>
+    <text x="430" y="174">FROZENDICT</text>
+    <text x="430" y="230">LAZY IMPORT</text>
+  </g>
+  <g fill="none" stroke="#C6A15A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M390 104 l8 8 l16 -18"/>
+    <path d="M390 160 l8 8 l16 -18"/>
+    <path d="M390 216 l8 8 l16 -18"/>
+  </g>
+</svg>

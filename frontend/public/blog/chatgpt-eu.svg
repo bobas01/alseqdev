@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <text x="56" y="78" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">CHATGPT</text>
+  <text x="52" y="176" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="72">EUROPE</text>
+  <text x="56" y="236" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">05.10.2026</text>
+  <g fill="#F4F1EA">
+    <rect x="56" y="268" width="220" height="8" rx="2"/>
+    <rect x="56" y="286" width="180" height="8" rx="2"/>
+    <rect x="56" y="304" width="200" height="8" rx="2"/>
+  </g>
+  <line x1="56" y1="328" x2="290" y2="328" stroke="#C6A15A" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"/>
+  <text x="360" y="300" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="28" letter-spacing="2">MARK</text>
+</svg>

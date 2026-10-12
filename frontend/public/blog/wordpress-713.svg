@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <text x="48" y="72" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="2">WORDPRESS</text>
+  <text x="48" y="118" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="28">06.10.2026</text>
+  <rect x="48" y="168" width="220" height="96" rx="16" fill="none" stroke="#F4F1EA" stroke-width="3"/>
+  <text x="86" y="228" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="36">7.1.2</text>
+  <g fill="none" stroke="#C6A15A" stroke-width="4" stroke-linecap="round">
+    <line x1="292" y1="216" x2="360" y2="216"/>
+    <path d="M344 204 l20 12 l-20 12"/>
+  </g>
+  <rect x="384" y="168" width="208" height="96" rx="16" fill="#C6A15A"/>
+  <text x="414" y="228" fill="#1B3A5F" font-family="Georgia, 'Times New Roman', serif" font-size="36">7.1.3</text>
+</svg>
