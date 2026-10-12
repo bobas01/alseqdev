@@ -6,5 +6,5 @@ defineProps({
 </script>
 
 <template>
-  <img v-if="src" :class="`${kind}-cover`" :src="`${src}?v=4`" alt="" />
+  <img v-if="src" :class="`${kind}-cover`" :src="`${src}?v=8`" alt="" />
 </template>
