@@ -8,6 +8,10 @@
   "rights": "Todos los derechos reservados.",
   "toTop": "Volver arriba",
   "languages": "Idiomas",
+  "theme": {
+    "toDark": "Cambiar al modo oscuro",
+    "toLight": "Cambiar al modo claro"
+  },
   "nav": {
     "label": "Secciones",
     "services": "Servicios",

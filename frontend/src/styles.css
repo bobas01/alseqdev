@@ -4,11 +4,14 @@
   --gold: #c6a15a;
   --paper: #f7f4ef;
   --cream: #f4f1ea;
+  --btn: #1b3a5f;
+  --surface: #ffffff;
   --font-title: Fraunces, Georgia, serif;
   --font-sub: Outfit, "Segoe UI", sans-serif;
   --font-text: "Source Sans 3", "Segoe UI", sans-serif;
   color: var(--navy);
   background: var(--paper);
+  color-scheme: light;
   font-family: var(--font-text);
   font-weight: 400;
 }
@@ -75,9 +78,43 @@ a {
   font-size: 28px;
 }
 
-.languages {
+.header-tools {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.languages {
   margin: 0;
+}
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(27, 58, 95, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
 }
 
 .lang-select {
@@ -297,7 +334,7 @@ h3 {
 }
 
 .btn-ink {
-  background: var(--navy);
+  background: var(--btn);
   color: var(--cream);
 }
 
@@ -738,9 +775,9 @@ h3 {
 }
 
 .blog-cats button[aria-pressed="true"] {
-  background: var(--navy);
+  background: var(--btn);
   color: var(--cream);
-  border-color: var(--navy);
+  border-color: var(--btn);
 }
 
 .blog-kicker {
@@ -786,7 +823,7 @@ h3 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
-  background: var(--navy);
+  background: var(--btn);
 }
 
 .blog-cover {
@@ -919,8 +956,8 @@ h3 {
 }
 
 .admin-side button[aria-current="page"] {
-  background: var(--navy);
-  border-color: var(--navy);
+  background: var(--btn);
+  border-color: var(--btn);
   color: var(--cream);
 }
 
@@ -1142,7 +1179,7 @@ h3 {
 
 .guide-bubble.user {
   align-self: flex-end;
-  background: var(--navy);
+  background: var(--btn);
   color: var(--cream);
 }
 
@@ -1245,7 +1282,7 @@ h3 {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: var(--navy);
+  background: var(--btn);
   color: var(--cream);
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(20, 26, 34, 0.18);
@@ -1375,6 +1412,78 @@ h3 {
   }
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --navy: #e6e0d4;
+  --paper: #10151c;
+  --ink: #1a2330;
+  --surface: #1c2633;
+}
+
+html[data-theme="dark"] .hero-glow {
+  background:
+    radial-gradient(ellipse at 18% 35%, rgba(198, 161, 90, 0.16), transparent 42%),
+    radial-gradient(ellipse at 82% 72%, rgba(36, 64, 110, 0.4), transparent 46%);
+}
+
+html[data-theme="dark"] .band-white,
+html[data-theme="dark"] .step-body,
+html[data-theme="dark"] .blog-list a,
+html[data-theme="dark"] .blog-search input,
+html[data-theme="dark"] .contact input,
+html[data-theme="dark"] .contact textarea,
+html[data-theme="dark"] .admin input,
+html[data-theme="dark"] .admin select,
+html[data-theme="dark"] .admin textarea,
+html[data-theme="dark"] .admin-list button,
+html[data-theme="dark"] .guide,
+html[data-theme="dark"] .guide-bubble.bot,
+html[data-theme="dark"] .guide-form input {
+  background: var(--surface);
+  color: var(--navy);
+}
+
+html[data-theme="dark"] .lang-select,
+html[data-theme="dark"] .theme-toggle,
+html[data-theme="dark"] .blog-search input,
+html[data-theme="dark"] .blog-cats button,
+html[data-theme="dark"] .blog-list a,
+html[data-theme="dark"] .step-body,
+html[data-theme="dark"] .contact input,
+html[data-theme="dark"] .contact textarea,
+html[data-theme="dark"] .admin input,
+html[data-theme="dark"] .admin select,
+html[data-theme="dark"] .admin textarea,
+html[data-theme="dark"] .admin-side button,
+html[data-theme="dark"] .admin-list button,
+html[data-theme="dark"] .guide-choices button,
+html[data-theme="dark"] .guide-form input {
+  border-color: rgba(230, 224, 212, 0.22);
+}
+
+html[data-theme="dark"] .lang-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%23e6e0d4' d='M1 1.5 6 6.5 11 1.5'/%3E%3C/svg%3E");
+}
+
+html[data-theme="dark"] .steps > li:not(:last-child)::before {
+  background: rgba(230, 224, 212, 0.22);
+}
+
+html[data-theme="dark"] .blog-cats button[aria-pressed="true"],
+html[data-theme="dark"] .admin-side button[aria-current="page"] {
+  background: var(--btn);
+  border-color: var(--btn);
+  color: var(--cream);
+}
+
+html[data-theme="dark"] .guide-choices button:hover,
+html[data-theme="dark"] .guide-choices button.is-on,
+html[data-theme="dark"] .theme-toggle:focus-visible,
+html[data-theme="dark"] .lang-select:focus-visible,
+html[data-theme="dark"] .blog-search input:focus-visible {
+  outline-color: var(--gold);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-glow,
   .shine,
@@ -1454,8 +1563,12 @@ h3 {
     flex-wrap: wrap;
   }
 
-  .languages {
+  .header-tools {
     margin-left: auto;
+  }
+
+  .languages {
+    margin-left: 0;
   }
 
   .site-nav {
