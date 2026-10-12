@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { htmlLanguage, i18n, LOCALES } from "./i18n";
+import { applyStoredTheme } from "./theme";
 import HomeView from "./views/HomeView.vue";
 
 const localePattern = LOCALES.join("|");
@@ -56,6 +57,8 @@ export const router = createRouter({
 });
 
 router.beforeEach((to) => {
+  applyStoredTheme();
+
   if (to.name === "admin") {
     document.documentElement.lang = "fr";
     document.title = "Messages — ALSEQ DEV";

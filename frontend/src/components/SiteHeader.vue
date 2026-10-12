@@ -4,15 +4,21 @@
       <LogoMark theme="light" />
     </router-link>
     <nav class="site-nav" :aria-label="t('nav.label')">
-      <a :href="`/${locale}#services`">{{ t("nav.services") }}</a>
-      <a :href="`/${locale}#methode`">{{ t("nav.method") }}</a>
+      <router-link v-slot="{ href, navigate }" custom :to="{ path: `/${locale}`, hash: '#services' }">
+        <a :href="href" @click="navigate">{{ t("nav.services") }}</a>
+      </router-link>
+      <router-link v-slot="{ href, navigate }" custom :to="{ path: `/${locale}`, hash: '#methode' }">
+        <a :href="href" @click="navigate">{{ t("nav.method") }}</a>
+      </router-link>
       <router-link
         :to="`/${locale}/blog`"
         :aria-current="route.name === 'blog' || route.name === 'article' ? 'page' : undefined"
       >
         {{ t("nav.blog") }}
       </router-link>
-      <a :href="`/${locale}#contact`">{{ t("nav.contact") }}</a>
+      <router-link v-slot="{ href, navigate }" custom :to="{ path: `/${locale}`, hash: '#contact' }">
+        <a :href="href" @click="navigate">{{ t("nav.contact") }}</a>
+      </router-link>
     </nav>
     <div class="header-tools">
       <button
@@ -55,26 +61,28 @@
 </template>
 
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import { blogNav } from "../blog";
+import { applyStoredTheme, toggleTheme } from "../theme";
 import LogoMark from "./LogoMark.vue";
 
 const { t } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const locale = computed(() => route.params.locale ?? "pt-br");
-const theme = ref(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+const theme = ref(applyStoredTheme());
+
+watch(
+  () => route.fullPath,
+  () => {
+    theme.value = applyStoredTheme();
+  },
+);
 
 function onTheme() {
-  theme.value = theme.value === "dark" ? "light" : "dark";
-  document.documentElement.dataset.theme = theme.value;
-  try {
-    localStorage.setItem("alseq-theme", theme.value);
-  } catch {
-    /* the choice still applies for this visit */
-  }
+  theme.value = toggleTheme();
 }
 
 function localeTo(code) {
