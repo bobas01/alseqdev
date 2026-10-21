@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <rect x="48" y="64" width="250" height="196" rx="22" fill="#F4F1EA"/>
+  <rect x="48" y="64" width="250" height="42" rx="22" fill="#C6A15A"/>
+  <rect x="48" y="88" width="250" height="18" fill="#C6A15A"/>
+  <circle cx="78" cy="85" r="8" fill="#1B3A5F"/>
+  <rect x="76" y="128" width="150" height="12" rx="4" fill="#1B3A5F" opacity="0.18"/>
+  <rect x="76" y="154" width="190" height="12" rx="4" fill="#1B3A5F" opacity="0.18"/>
+  <rect x="76" y="180" width="120" height="12" rx="4" fill="#1B3A5F" opacity="0.18"/>
+  <rect x="76" y="214" width="72" height="22" rx="11" fill="#C6A15A"/>
+  <text x="340" y="168" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="96">128</text>
+  <text x="344" y="214" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">12.10.2026</text>
+</svg>

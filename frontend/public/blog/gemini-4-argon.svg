@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <text x="48" y="78" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="3">ARGON</text>
+  <text x="40" y="200" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="120">$2</text>
+  <text x="48" y="248" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">30.11.2026</text>
+  <line x1="300" y1="168" x2="372" y2="168" stroke="#C6A15A" stroke-width="8" stroke-linecap="round"/>
+  <polygon points="368,150 412,168 368,186" fill="#C6A15A"/>
+  <rect x="436" y="108" width="156" height="120" rx="28" fill="none" stroke="#C6A15A" stroke-width="4"/>
+  <text x="468" y="186" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="64">$4</text>
+  <text x="456" y="268" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">01.12.2026</text>
+</svg>

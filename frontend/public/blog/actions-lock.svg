@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#1B3A5F"/>
+  <rect x="56" y="56" width="228" height="248" rx="16" fill="#F4F1EA"/>
+  <polygon points="212,56 284,56 284,128" fill="#C6A15A"/>
+  <rect x="118" y="168" width="96" height="72" rx="12" fill="#C6A15A"/>
+  <path d="M136 168 v-24 a26 26 0 0 1 52 0 v24" fill="none" stroke="#1B3A5F" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="166" cy="202" r="7" fill="#1B3A5F"/>
+  <text x="328" y="176" fill="#F4F1EA" font-family="Georgia, 'Times New Roman', serif" font-size="64">LOCK</text>
+  <line x1="328" y1="200" x2="478" y2="200" stroke="#C6A15A" stroke-width="6" stroke-linecap="round"/>
+  <text x="328" y="244" fill="#C6A15A" font-family="Georgia, 'Times New Roman', serif" font-size="22">14.10.2026</text>
+</svg>
